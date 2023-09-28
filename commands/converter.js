@@ -1,33 +1,18 @@
 /**
-//══════════════════════════════════════════════════════════════════════════════════════════════════════//
-//                                                                                                      //
-//                                ＷＨＡＴＳＡＰＰ ＢＯＴ－ＭＤ ＢＥＴＡ                                   //
-//                                                                                                      // 
-//                                         Ｖ：１．０．１                                                // 
-//                                                                                                      // 
-//            ███████╗██╗   ██╗██╗  ██╗ █████╗ ██╗██╗         ███╗   ███╗██████╗                        //
-//            ██╔════╝██║   ██║██║  ██║██╔══██╗██║██║         ████╗ ████║██╔══██╗                       //
-//            ███████╗██║   ██║███████║███████║██║██║         ██╔████╔██║██║  ██║                       //
-//            ╚════██║██║   ██║██╔══██║██╔══██║██║██║         ██║╚██╔╝██║██║  ██║                       //
-//            ███████║╚██████╔╝██║  ██║██║  ██║██║███████╗    ██║ ╚═╝ ██║██████╔╝                       //
-//            ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝    ╚═╝     ╚═╝╚═════╝                        //
-//                                                                                                      //
-//                                                                                                      //
-//                                                                                                      //
-//══════════════════════════════════════════════════════════════════════════════════════════════════════//
+
 
 CURRENTLY RUNNING ON BETA VERSION!!
 *
-   * @project_name : Suhail-Md
-   * @author : Suhail Tech Info
-   * @youtube : https://www.youtube.com/c/@SuhailTechInfo0
-   * @description : Suhail-Md ,A Multi-functional whatsapp user bot.
+   * @project_name : Vajira-Md
+   * @author : Vajira Tech Info
+   * @youtube : https://youtube.com/@gamingewingyt6216
+   * @description : Vajira-Md ,A Multi-functional whatsapp user bot.
    * @version 1.2.2
 *
    * Licensed under the  GPL-3.0 License;
 * 
-   * Created By Suhail Tech Info.
-   * © 2023 Suhail-Md.
+   * Created By Vajira Tech Info.
+   * © 2023 Vajira-Md.
 * 
    * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
    * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -75,8 +60,8 @@ smd({pattern: "sticker",alias: ["s"], desc: "Makes sticker of replied image/vide
              let mime = msg.quoted.mtype
              if ( mime !="stickerMessage") return await msg.reply("*Uhh Please, Reply to sticker*") 
              var pack; var author;
-             if (text) {let anu = text.split("|");pack = anu[0] !== "" ? anu[0] : msg.pushName; author = anu[1] && anu[1]!==""? anu[1] : 'Suhail.bot-Md ♥️'; } 
-              else { pack = msg.pushName;  author = 'Suhail.bot-Md ♥️'  }
+             if (text) {let anu = text.split("|");pack = anu[0] !== "" ? anu[0] : msg.pushName; author = anu[1] && anu[1]!==""? anu[1] : 'Vajira.bot-Md ♥️'; } 
+              else { pack = msg.pushName;  author = 'Vajira.bot-Md ♥️'  }
               let media = await msg.quoted.download();
 
            let options={pack: pack,author: author,type: StickerTypes.FULL,quality: 75, }
@@ -177,7 +162,7 @@ smd({
         async(Suhail, msg, text) => {
             if (isNaN(text.split(" ")[0]) || !text) {
                 let text = tiny(
-                    "Fancy text generator\n\n*_______________________________*\n*Example: .fancy 32 Suhail Md*\n*_______________________________*\n\n"
+                    "Fancy text generator\n\n*_______________________________*\n*Example: .fancy 32 Vajira Md*\n*_______________________________*\n\n"
                 );
                 listall("Suhail").forEach((txt, num) => {
                     text += `${(num += 1)} ${txt}\n`;
