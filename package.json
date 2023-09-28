@@ -1,7 +1,7 @@
 {
-               "name": "suhail-md",
+               "name": "VAJIRA-MD",
                "version": "1.2.2",
-               "description": "Multi device whatsapp bot by SuhailTechInfo.",
+               "description": "Multi device whatsapp bot by VajiraTechInfo.",
                "main": "lib/client.js",
                "type": "commonjs",
                "license": "GPL-3.0",
@@ -9,7 +9,7 @@
                 "start": "pm2 start lib/client.js --deep-monitoring --attach --name Suhail-Md",
                 "stop": "pm2 stop Suhail-Md"
                 },
-               "author": "SuhailTechInfo",
+               "author": "VajiraTechInfo",
               "dependencies": {
                        "@sampandey001/baileys": "latest",
                        "@adiwajshing/keyed-db": "^0.2.4",
@@ -73,10 +73,10 @@
                     },
                  "repository": {
                  "type": "git",
-                 "url": "git+https://github.com/SuhailTechInfo/Suhail-Md.git"
+                 "url": "git+https://github.com/vajirabot1/KING-VAJIRA-MD.git"
                   },
                  "bugs": {
-                 "url": "https://github.com/SuhailTechInfo/Suhail-Md/issues"
+                 "url": "https://github.com/vajirabot1/KING-VAJIRA-MD/issues"
                   },
-                 "homepage": "https://github.com/SuhailTechInfo/Suhail-Md#readme"
+                 "homepage": "https://github.com/vajirabot1/KING-VAJIRA-MD#readme"
                   }
