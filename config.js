@@ -53,7 +53,7 @@ module.exports = {
   VERSION: process.env.VERSION || 'v.1.2.2',
   LANG: process.env.THEME ? process.env.THEME.toUpperCase() : 'VAJIRA',
   menu : process.env.MENU || '', /**  Available @MENU @Schemes 1: Aztec_Md, 2: A17_Md, 3: Vajira-Md Default ---------- If Not Choose then it Randomely Pic One Of Them Each time **/
-  WORKTYPE: process.env.WORKTYPE || process.env.MODE || 'private',
+  WORKTYPE: process.env.WORKTYPE || process.env.MODE || 'public',
   KOYEB_API : process.env.KOYEB_API || ''
 };
 
