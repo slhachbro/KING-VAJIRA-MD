@@ -40,12 +40,12 @@
       ```
       OWNER_NUMBER="911234567890"
       MONGODB_URI="mongodb+srv://*************"
-      SESSION_ID = "secktorbot.herokuapp.com/session"
+      SESSION_ID = "Vajirabot.herokuapp.com/session"
       THUMB_IMAGE = "https://raw.githubusercontent.com/SecktorBot/Brandimages/main/logos/SocialLogo%201.png"
       port = 5000
       email = "sam@secktor.live"
       global_url = "instagram.com"
-      OWNER_NAME = "SamPandey001"
+      OWNER_NAME = "vajirabot1"
       AUTO_REACTION = false
       FAKE_COUNTRY_CODE = 92
       READ_MESSAGE = false
@@ -57,7 +57,7 @@
       WELCOME_MESSAGE =  "*Hi,* @user \n*Welcome in* @gname \n*Member count* : @count th"
       THEME= SECKTOR
       WORKTYPE = public
-      PACK_INFO = "Sam;Pandey"
+      PACK_INFO = "Vajira;Nimesha"
       ANTILINK_VALUES = "chat.whatsapp.com"
       
       ```
