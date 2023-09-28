@@ -1,33 +1,18 @@
 /**
-//══════════════════════════════════════════════════════════════════════════════════════════════════════//
-//                                                                                                      //
-//                                ＷＨＡＴＳＡＰＰ ＢＯＴ－ＭＤ ＢＥＴＡ                                   //
-//                                                                                                      // 
-//                                         Ｖ：１．０．１                                                // 
-//                                                                                                      // 
-//            ███████╗██╗   ██╗██╗  ██╗ █████╗ ██╗██╗         ███╗   ███╗██████╗                        //
-//            ██╔════╝██║   ██║██║  ██║██╔══██╗██║██║         ████╗ ████║██╔══██╗                       //
-//            ███████╗██║   ██║███████║███████║██║██║         ██╔████╔██║██║  ██║                       //
-//            ╚════██║██║   ██║██╔══██║██╔══██║██║██║         ██║╚██╔╝██║██║  ██║                       //
-//            ███████║╚██████╔╝██║  ██║██║  ██║██║███████╗    ██║ ╚═╝ ██║██████╔╝                       //
-//            ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝    ╚═╝     ╚═╝╚═════╝                        //
-//                                                                                                      //
-//                                                                                                      //
-//                                                                                                      //
-//══════════════════════════════════════════════════════════════════════════════════════════════════════//
+
 
 CURRENTLY RUNNING ON BETA VERSION!!
 *
-   * @project_name : Suhail-Md
-   * @author : Suhail Tech Info
-   * @youtube : https://www.youtube.com/c/@SuhailTechInfo0
-   * @description : Suhail-Md ,A Multi-functional whatsapp user bot.
+   * @project_name : Vajira-Md
+   * @author : Vajira Tech Info
+   * @youtube : https://youtube.com/@gamingewingyt6216
+   * @description : Vajira-Md ,A Multi-functional whatsapp user bot.
    * @version 1.2.2
 *
    * Licensed under the  GPL-3.0 License;
 * 
-   * Created By Suhail Tech Info.
-   * © 2023 Suhail-Md.
+   * Created By Vajira Tech Info.
+   * © 2023 Vajira-Md.
 * 
    * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
    * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -373,7 +358,7 @@ try {
 //---------------------------------------------------------------------------
 smd({pattern: "gitclone",desc: "Downloads apks  .",category: "downloader",filename: __filename,use: '<git url>', },
         async(Suhail, citel, text) => {
-	if (!text) return await citel.send('*Provide Repo Url, Ex:- _.gitclone https://github.com/SuhailTechInfo/Secktor-bot_*') 
+	if (!text) return await citel.send('*Provide Repo Url, Ex:- _.gitclone https://github.com/vajirabot1/KING-VAJIRA-MD_*') 
     const regex = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
     if (!regex.test(text) ) return await citel.send('*Uhh Please, Provide Valid Repositry Url*');
     let [_, user, repo] = text.match(regex) || []
@@ -386,9 +371,9 @@ smd({pattern: "gitclone",desc: "Downloads apks  .",category: "downloader",filena
 	})
   const ytIdRegex =	/(?:http(?:s|):\/\/|)(?:(?:www\.|)youtube(?:\-nocookie|)\.com\/(?:watch\?.*(?:|\&)v=|embed|shorts\/|v\/)|youtu\.be\/)([-_0-9A-Za-z]{11})/
   //---------------------------------------------------------------------------
-smd({pattern: "tts",desc: "text to speech.",category: "downloader",filename: __filename,use: '<Hii,this is Suhail>',},
+smd({pattern: "tts",desc: "text to speech.",category: "downloader",filename: __filename,use: '<Hii,this is Vajira>',},
         async(Suhail, citel, text) => {
-            if (!text && !citel.quoted) return citel.reply(`*Please give me Text*\n *_Example : .tts Hi,I am Suhail Tech._*`);
+            if (!text && !citel.quoted) return citel.reply(`*Please give me Text*\n *_Example : .tts Hi,I am Vajira Tech._*`);
             if (!text) { text=citel.quoted.text;  }
             let texttts = text
             const ttsurl = googleTTS.getAudioUrl(texttts, {lang: "en", slow: false, host: "https://translate.google.com", });
@@ -682,9 +667,9 @@ async(Suhail, citel, text) => {
 
 
 
-// By @SuhailTechInfo
-// https://wa.me/923184474176
-// https://www.youtube.com/@suhailtechinfo0
+// By @VajiraTechInfo
+// https://wa.me/94766943622
+// https://youtube.com/@gamingewingyt6216
 
 
 
@@ -695,12 +680,12 @@ async(Suhail, citel, text) => {
     filename: __filename,
     use: '<Add Yt Song Query>'
 },
-async(Suhail, citel, text) => {
+async(Vajira, citel, text) => {
 if (!text) return await citel.reply(`*_Ohh PLease, Give Me Song Name_*`);
 let search = await yts(text)
 let i = search.all[1] ;
 let cap = "\t *---Yt Song Searched Data---*   \n\nTitle : " + i.title + "\nUrl : " + i.url +"\nDescription : " + i.timestamp +"\nViews : "+i.views +"\nUploaded : " +i.ago +"\nAuthor : "+i.author.name+"\n\n\nReply 1 To Video \nReply 2 To Audio" ;
-Suhail.bot.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap })
+Vajira.bot.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap })
 })
 */
 
