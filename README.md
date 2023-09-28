@@ -1,19 +1,19 @@
 <div align="center">
-    ⏬<b>DARK VAJIRA</b>⏬</b>
+    ⏬<b>KING VAJIRA</b>⏬</b>
 
   
 <div align="center">
 </p>
 
 
-## [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=F00&lines=HELLO+IM+DARK+VAJIRA+WHATSAPP+BOT)](https://git.io/typing-svg)
+## [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=F00&lines=HELLO+IM+KING+VAJIRA+WHATSAPP+BOT)](https://git.io/typing-svg)
 
    <p align="center">
 <a href="https://github.com/vajirabot1">
-    <img src="https://telegra.ph/file/26fa7a93ca90c0edaae45.jpg"  width="700px">
+    <img src="https://telegra.ph/file/fb7993e24f7ecdaecbed5.jpg"  width="700px">
   </a>
 
-## [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=F33A6A&lines=𝐖𝐞𝐥𝐜𝐨𝐦𝐞+𝐓𝐨+𝘿𝘼𝙍𝙆╺+𝙑𝘼𝙅𝙄𝙍𝘼+-+𝗕𝗢𝗧.;𝙿𝙾𝚆𝙴𝚁𝙳+𝙱𝚈:+𝚁𝙴𝙳+𝙳𝚁𝙰𝙶𝙾𝙽+𝚃𝙴𝙰𝙼;ℂ𝕣𝕖𝕒𝕥𝕖𝕕+𝕓𝕪:+𝙒𝙈𝙍.𝙑𝘼𝙅𝙄𝙍𝘼;𝐌𝐑:+☬𝔻𝔸ℝ𝕂༒𝕍𝔸𝕁𝕀ℝ𝔸࿐;💕ඉතිං+කොහොමද🙃;😁මොකද+කරන්නෙ🌹)](https://git.io/typing-svg)
+## [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&color=F33A6A&lines=𝐖𝐞𝐥𝐜𝐨𝐦𝐞+𝐓𝐨+𝘿𝘼𝙍𝙆╺+𝙑𝘼𝙅𝙄𝙍𝘼+-+𝗕𝗢𝗧.;𝙿𝙾𝚆𝙴𝚁𝙳+𝙱𝚈:+𝙺𝙸𝙽𝙶+𝚅𝙰𝙹𝙸𝚁𝙰+𝚃𝙴𝙰𝙼;ℂ𝕣𝕖𝕒𝕥𝕖𝕕+𝕓𝕪:+𝙒𝙈𝙍.𝙑𝘼𝙅𝙄𝙍𝘼;𝐌𝐑:+☬𝔻𝔸ℝ𝕂༒𝕍𝔸𝕁𝕀ℝ𝔸࿐;💕ඉතිං+කොහොමද🙃;😁මොකද+කරන්නෙ🌹)](https://git.io/typing-svg)
 
   
 <div align="center">    
@@ -25,11 +25,11 @@
 [![Scan QR CODE](https://i.imgur.com/ouR5zv8.jpg)](https://replit.com/@VajiraRathnayak/DARK-VAJIRA-QR-SCAN?v=1)
 
     
-***Click [FORK](https://github.com/vajirabot1/DARK-VAJIRA-fork)***
+***Click [FORK](https://github.com/vajirabot1/KING-VAJIRA-MD-fork)***
 
 <b><details><summary>𝘿𝙀𝙋𝙇𝙊𝙔𝙈𝙀𝙉𝙏 𝙈𝙀𝙏𝙃𝙊𝘿𝙎</summary><br>
  
- [![Deploy](https://www.herokucdn.com/deploy/button.svg)]()
+ [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/vajirabot1/KING-VAJIRA-MD)
 
 </details>
 
