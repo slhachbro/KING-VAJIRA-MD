@@ -226,7 +226,7 @@ async(Suhail, citel) => {
 
 let sock;
 smd({ on: "body" }, async(Suhail, msg,text,{isCreator}) => {  
-if( ( !Config.WORKTYPE.includes("public") && !isCreator ) 👑|  msg.isBot ) return ;
+if( ( !Config.WORKTYPE.includes("public") && !isCreator ) ||  msg.isBot ) return ;
 
 
 
