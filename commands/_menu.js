@@ -107,7 +107,7 @@ async(Suhail, citel) => {
               pattern: "menu",
               desc: "Help list",
               category: "general",
-             // react: "👀",
+             // react: "👨‍💻",
               filename: __filename
           },
           async(Suhail, msg, text) => {
@@ -118,7 +118,7 @@ async(Suhail, citel) => {
               pattern: "list",
               desc: "list menu",
               category: "general",
-              react: "🥀"
+              react: "👨‍💻"
            },
           async(Suhail, msg , text ) => {
             
@@ -146,7 +146,7 @@ async(Suhail, citel) => {
           pattern: "owner",
           desc: "To check ping",
           category: "general",
-          //react: "💜",
+          //react: "👨‍💻",
           filename: __filename
       },
       async(Suhail, msg) => {
@@ -191,7 +191,7 @@ async(Suhail, citel) => {
       pattern: "file",
       desc: "to get extact name where that command is in repo.\nSo user can edit that.",
       category: "general",
-      //react: "✨",
+      //react: "👨‍💻",
       filename: __filename
   },
   async(Suhail, msg, text ,{isCreator , cmd,cmdName }) => {
