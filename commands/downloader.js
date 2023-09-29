@@ -505,7 +505,7 @@ smd({pattern: "song", alias: ["audio"],desc: "Downloads audio from youtube.",cat
                 let yts = require("secktor-pack")
                 let search = await yts(text);
                 let i = search.all[1] ;
-                let cap = "\t *---Yt Song Searched Data---*   \n\nTitle : " + i.title + "\nUrl : " + i.url +"\nDescription : " + i.timestamp +"\nViews : "+i.views +"\nUploaded : " +i.ago +"\nAuthor : "+i.author.name+"\n\n\nReply 1 To Video \nReply 2 To Audio" ;
+                let cap = "\t *---Yt Song Searched Data---*   \n\n📌Title : " + i.title + "\nUrl : " + i.url +"\n🗺️Description : " + i.timestamp +"\n👥Views : "+i.views +"\n📥Uploaded : " +i.ago +"\n👤Author : "+i.author.name+"\n\n\nReply 1 To Take Video \nReply 2 To Take Audio" ;
                 Suhail.bot.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
           
            
