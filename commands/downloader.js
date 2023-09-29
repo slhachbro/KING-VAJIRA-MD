@@ -429,6 +429,8 @@ async(Suhail, citel, text) => {
     if (!urlYt) { let yts = require("secktor-pack"),search = await yts(text),anu = search.videos[0];urlYt = anu.url;  }
     vid = ytIdRegex.exec(urlYt) || [];
     let info =await yt.getInfo(vid[1]);
+    let cap = "\t *---Yt Song Searched Data---*   \n\n📌Title : " + i.title + "\nUrl : " + i.url +"\n🗺️Description : " + i.timestamp +"\n👥Views : "+i.views +"\n📥Uploaded : " +i.ago +"\n👤Author : "+i.author.name+"\n\n\nReply 1 To Take Video \nReply 2 To Take Audio" ;
+    Suhail.bot.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
     if( info  && info.duration  >= videotime) return await citel.reply(`*_Can't dowanload, file duration too big_*`);
     await citel.send(`_Downloading ${info.title}?_`);
     let file = await yt.download(vid[1],{type : "audio",quality:"best"})
