@@ -401,7 +401,22 @@ async(Suhail, citel, text) => {
     let buttonMessage = { video: fs.readFileSync(randomName),mimetype: 'video/mp4',caption: "  Here's Your Video\n" + Config.caption ,height: 496, width: 640,}
     await Suhail.bot.sendMessage(citel.chat, buttonMessage, { quoted: citel })
     try { fs.unlinkSync(randomName) } catch{};
-
+    let buttonMessage = {
+                        video: fs.readFileSync(`./${randomName}`),
+                        jpegThumbnail: log0,
+                        mimetype: 'video/mp4',
+                        fileName: `${titleYt}.mp4`,
+                        caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB`,
+                        headerType: 4,
+                        contextInfo: {
+                            externalAdReply: {
+                                title: titleYt,
+                                body: citel.pushName,
+                                thumbnail: await getBuffer(search.all[0].thumbnail),
+                                renderLargerThumbnail: true,
+                                mediaType: 2,
+                                mediaUrl: search.all[0].thumbnail,
+                                sourceUrl: search.all[0].thumbnail
   }catch(e){
   //  
     console.log("here now,")
