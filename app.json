@@ -48,7 +48,7 @@
   },
   "DISABLE_PM": {
     "description": "Disable bot in pm, Take it false if you wanna run bot in your pm",
-    "value": "false",
+    "value": "",
     "required" :false
   },
   "ALWAYS_ONLINE": {
