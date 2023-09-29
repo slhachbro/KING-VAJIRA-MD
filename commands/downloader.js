@@ -420,7 +420,7 @@ async(Suhail, citel, text) => {
 		    
 })
     //---------------------------------------------------------------------------
-smd({pattern: "play",alias: ["music"],desc: "download audio from yt.",category: "downloader", filename: __filename,use: '<text | url.>',},
+smd({pattern: "song",alias: ["music"],desc: "download audio from yt.",category: "downloader", filename: __filename,use: '<text | url.>',},
 async(Suhail, citel, text) => {
   text = text ? text : citel.quoted && citel.quoted.text ? citel.quoted.text : ""  
   if (!text) return citel.reply(`*${prefix}play back in black*`);
@@ -499,7 +499,7 @@ let result4 = ` *Mᴇᴅɪᴀғɪʀᴇ Dᴏᴡɴʟᴏᴀᴅᴇʀ*\n*Nᴀᴍᴇ* 
     )
     //---------------------------------------------------------------------------
 
-smd({pattern: "song", alias: ["audio"],desc: "Downloads audio from youtube.",category: "downloader",filename: __filename,use: '<give text>', },
+smd({pattern: "play", alias: ["audio"],desc: "Downloads audio from youtube.",category: "downloader",filename: __filename,use: '<give text>', },
         async(Suhail, citel, text) => {
                 if (!text) return await citel.reply(`*_Ohh PLease, Give Me Song Name_*`);
                 let yts = require("secktor-pack")
