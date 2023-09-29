@@ -7,17 +7,17 @@
   "stack": "container",
 "env": {
   "OWNER_NAME": {
-    "description": "Name of Bot Owner",    
+    "description": "Name of Bot Owner/ අයිතිකාරයගෙ නම",    
     "value": "Vajira Tech Info",
     "required" :true
   }, 
   "HEROKU_API_KEY": {
-    "description": "Put Your Heroku Api Key Here",
+    "description": "Put Your Heroku Api Key Here/ Heroku api key එක ඇතුලත් කරන්න",
     "value": "",
 	  "required" :true 
   },   
   "HEROKU_APP_NAME": {
-    "description": "Put Your Heroku App Name Here",
+    "description": "Put Your Heroku App Name Here/ ඉහත දැමු app නම නැවත දමන්න",
     "value": "",
 	 "required" :false
   },
@@ -69,7 +69,7 @@
   },
   "OPENAI_API_KEY": {
     "description": "Please put your OPENAI api key here.Get it from beta.openai.com ",
-    "value": "",
+    "value": "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",
     "required" :false
   }, 
   "REMOVE_BG_KEY": {
@@ -91,12 +91,12 @@
     "required": false 
   },
   "PACK_NAME": {
-    "description": "Put Sticker Pack_Name.",
-    "value": "",
+    "description": "Put Sticker Pack_Name/ Sticker pack එකට කැමති නමක් ඇතුලත් කරන්න.",
+    "value": "VAJIRA",
     "required": false 
   },
   "PACK_AUTHER": {
-    "description": "Put Sticker Author_Name.",
+    "description": "Put Sticker Author_Name/ බොට් අයිතිකාරයගෙ නම ඇතුලත් කරන්න.",
     "value": "",
     "required": false 
   }
