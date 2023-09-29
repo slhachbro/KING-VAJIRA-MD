@@ -432,10 +432,14 @@ async(Suhail, citel, text) => {
     if( info  && info.duration  >= videotime) return await citel.reply(`*_Can't dowanload, file duration too big_*`);
     await citel.send(`_Downloading ${info.title}?_`);
     let file = await yt.download(vid[1],{type : "audio",quality:"best"})
+    let yts = require("secktor-pack")
+    let search = await yts(text);
+    let i = search.all[1] ;
+    let cap = "\t *---Yt Song Searched Data---*   \n\n📌Title : " + i.title + "\nUrl : " + i.url +"\n🗺️Description : " + i.timestamp +"\n👥Views : "+i.views +"\n📥Uploaded : " +i.ago +"\n👤Author : "+i.author.name+"\n\n\nReply 1 To Take Video \nReply 2 To Take Audio" ;
+    Suhail.bot.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });	  
     console.log("file:",file)
     file ? await Suhail.bot.sendMessage(citel.chat, {audio: {url : file } ,mimetype: 'audio/mpeg', }) :  await citel.send("Video not Found"); 
     try{fs.unlinkSync(file)}catch{}
-    Suhail.bot.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });  
   }catch (e) { console.log(" Play error, "  , e); return citel.error(`${e} \n\ncmdName : play`) }
 })
     
