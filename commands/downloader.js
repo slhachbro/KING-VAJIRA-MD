@@ -395,17 +395,11 @@ async(Suhail, citel, text) => {
     let VidTime = Math.floor(i.timestamp* 60);
     if( VidTime  >= videotime) return await citel.reply(`*_Can't dowanload, video file too big_*`);
     let titleYt = infoYt.videoDetails.title;
-    let infoYt = await ytdl.getInfo(urlYt);
-    if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
-    let titleYt = infoYt.videoDetails.title;
-    let randomName = getRandom(".mp4");
-    citel.reply('*Downloadig:* '+titleYt)
-    const stream = ytdl(urlYt, {
-    filter: (info) => info.itag == 22 || info.itag == 18,
     let randomName = `./temp/${vid[1]}.mp4` ;
     const stream = ytdl(urlYt, {   filter: (info) => info.itag == 22 || info.itag == 18, }).pipe(fs.createWriteStream(`./${randomName}`));
     await new Promise((resolve, reject) => {stream.on("error", reject);stream.on("finish", resolve);});
     let buttonMessage = { video: fs.readFileSync(randomName),mimetype: 'video/mp4',caption: "  Here's Your Video\n" + Config.caption ,height: 496, width: 640,}
+    Suhail.bot.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
     await Suhail.bot.sendMessage(citel.chat, buttonMessage, { quoted: citel })
     try { fs.unlinkSync(randomName) } catch{};
 
