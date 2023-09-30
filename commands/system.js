@@ -46,14 +46,14 @@ smd({
         },
         async(Suhail, msg, text) => {
          try{
-            if (!text) return msg.reply(`*Provide me Text To Get QR*`);
+            if (!text) return msg.reply(`*QR ලබා ගැනීමට මට text ලබා දෙන්න*`);
             let h =`https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=${text}`;
             return await Suhail.bot.sendMessage(msg.chat, {image: { url: h },caption: `*_Scan Qr To Get You Text_*`,  } );
          }catch(e){return await msg.error(`${e}\nCommand: qr `),console.log("error from qr" , e)      }
     })
 
 //--------------------------------------------------------------------------- 
-/*
+
 smd({
     pattern: "rmbg",
     alias : ['removebg'],
@@ -78,9 +78,9 @@ smd({
         },
         async(Suhail, msg, text) => {
           try{
-            if (!msg.quoted) return await msg.reply(`*Reply To Any Image/Video To Get Url*`)
+            if (!msg.quoted) return await msg.reply(`*URL ලබා ගැනීමට ඕනෑම රූපයකට/වීඩියෝවකට පිළිතුරු දෙන්න*`)
             let mime = msg.quoted.mtype
-            if(mime !='videoMessage' && mime !='imageMessage' ) return await msg.reply("Uhh Please, Reply To An Image/Video")
+            if(mime !='videoMessage' && mime !='imageMessage' ) return await msg.reply("අහ්හ් කරුණාකර, රූපයකට/වීඩියෝවකට පිළිතුරු දෙන්න")
             let media = await Suhail.bot.downloadAndSaveMediaMessage(msg.quoted);
             let anu = await TelegraPh(media);
             await msg.reply(util.format(anu));
@@ -110,7 +110,7 @@ smd({
     )
     //---------------------------------------------------------------------------
 
-/*
+
 smd({
             pattern: "shell",
             category: "owner",
@@ -147,10 +147,10 @@ smd({
                } catch (err) { return  await msg.reply(err.toString()); }
 })
 
-  */
+*/ 
 
 //---------------------------------------------------------------------------
-/*smd({
+smd({
             pattern: "delnote",
             category: "owner",
             filename: __filename,
@@ -168,7 +168,7 @@ smd({
   */
 //---------------------------------------------------------------------------
 
-/*smd({
+smd({
             pattern: "delallnotes",
             category: "owner",
             filename: __filename,
@@ -188,7 +188,7 @@ smd({
     //---------------------------------------------------------------------------
 //                  ADD NOTE  COMMANDS
 //---------------------------------------------------------------------------
-/*
+
 smd({
             pattern: "addnote",
             category: "owner",
@@ -296,7 +296,7 @@ smd({
             try 
             {
                 let users = msg.quoted ? msg.quoted.sender : msg.mentionedJid ? msg.mentionedJid[0] : msg.msg.contextInfo.participant || false;
-                if (!users) return msg.reply(`❌ Please mention any user ${tlang().greet}.`)
+                if (!users) return msg.reply(`❌ කරුණාකර ඕනෑම පරිශීලකයෙකු සඳහන් කරන්න ${tlang().greet}.`)
                 let pushnamer = Suhail.bot.getName(users);
                 sck1.findOne({ id: users }).then(async(usr) => 
                 {
@@ -305,11 +305,11 @@ smd({
                         await sck1.new({ id: users, ban: "true" })
                         return msg.reply(`_Banned ${usr.name} from Using Commands._`)
                     } 
-                    if (usr.ban == "true") return msg.reply(`${pushnamer} is already Banned from Using Commands`)
+                    if (usr.ban == "true") return msg.reply(`${pushnamer} විධාන භාවිතා කිරීම දැනටමත් තහනම් කර ඇත`)
                     await sck1.updateOne({ id: users }, { ban: "true" })
-                    return msg.reply(`_Successfully Banned ${usr.name} from Using Commands._`)
+                    return msg.reply(`_සාර්ථකව තහනම් කරන ලදී ${usr.name} විධාන භාවිතා කිරීමෙන්._`)
                 })
-            } catch (e) {  return msg.reply("*Please Reply/Mention Any User.❌*")  }
+            } catch (e) {  return msg.reply("*කරුණාකර පිළිතුරු දෙන්න/ඕනෑම පරිශීලකයෙකු සඳහන් කරන්න.❌*")  }
 
 
        })
@@ -321,7 +321,7 @@ smd({
             desc: "Unbans banned user (from using bot)."
         },
         async(Suhail, msg, text,{ isCreator }) => {
-            if (!isCreator) return msg.reply(`This command is only for my Owner`)
+            if (!isCreator) return msg.reply(`මෙම විධානය මගේ හිමිකරුට පමණි`)
             try 
             {
                 let users = msg.quoted ? msg.quoted.sender : msg.mentionedJid ? msg.mentionedJid[0] : msg.msg.contextInfo.participant || false;
@@ -329,11 +329,11 @@ smd({
                 let pushnamer = Suhail.bot.getName(users);
                 sck1.findOne({ id: users }).then(async(usr) =>{ // console.log(usr.ban);
                     if (!usr) { return msg.reply(`${pushnamer} is unbanned.`);}
-                    if (usr.ban !== "true") return await msg.reply(`${usr.name} is already unbanned.`);
+                    if (usr.ban !== "true") return await msg.reply(`${usr.name} දැනටමත් තහනම් කර නැත.`);
                     await sck1.updateOne({ id: users }, { ban: "false" })
                     return await msg.reply(`${usr.name} is free as a bird now`);
                 })
-            } catch {  return msg.reply("Please mention any user.❌");  }
+            } catch {  return msg.reply("කරුණාකර ඕනෑම පරිශීලකයෙකු සඳහන් කරන්න.❌");  }
         })
 
 
@@ -347,7 +347,7 @@ const _0x4d8b98=_0x2b2a;function _0x9d6c(){const _0x832377=['get','\x20```To\x20
 
 
 
-/** 
+
 cmd({
            pattern: "approve",
            category: "no-cat",
