@@ -32,7 +32,7 @@
  
  [![Deploy on Heroku](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/vajirabot1/KING-VAJIRA-MD)
 
-[![Deploy on Replit](https://repl.it/badge/github/quiec/whatsAlfa)](https://suhail-web01.vercel.app/replit.html)
+[![Deploy on Replit](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/github/vajirabot1/KING-VAJIRA-Md)
 </details>
 
 ## SOCIAL MEDIA
