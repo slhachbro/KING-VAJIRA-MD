@@ -399,7 +399,6 @@ async(Suhail, citel, text) => {
     const stream = ytdl(urlYt, {   filter: (info) => info.itag == 22 || info.itag == 18, }).pipe(fs.createWriteStream(`./${randomName}`));
     await new Promise((resolve, reject) => {stream.on("error", reject);stream.on("finish", resolve);});
     let buttonMessage = { video: fs.readFileSync(randomName),mimetype: 'video/mp4',caption: "  Here's Your Video\n" + Config.caption ,height: 496, width: 640,}
-    Suhail.bot.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
     await Suhail.bot.sendMessage(citel.chat, buttonMessage, { quoted: citel })
     try { fs.unlinkSync(randomName) } catch{};
 
