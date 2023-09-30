@@ -219,8 +219,8 @@ smd({
     async(Suhail, msg, text,{ isCreator }) => {
   const { tlang } = require('../lib')
 if (!isCreator) return msg.reply(tlang().owner)
-let txt = `╭───── *『 MONGODB NOTES 』* ───◆
-┃ Here You Can Store Notes For Later Use
+let txt = `╭───── *『 VAJIRA NOTES 』* ───◆
+┃ 📌Here You Can Store Notes For Later Use
 ┃ *------------------------------------------*
 ┃  ┌┤  *✯---- ADD NEW NOTE ----⦿*
 ┃  │✭ *Cmd :* ${prefix}notes add 'Your Text'
