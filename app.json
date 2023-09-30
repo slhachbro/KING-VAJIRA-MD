@@ -80,6 +80,10 @@
   "MONGODB_URI": {
     "description": "Put your own Mongodb key. Its a secret String for Mongodb Connection.(Required)",
     "value": "mongodb+srv://vajira:vajira@cluster0.hzwqrqq.mongodb.net/?retryWrites=true&w=majority"
+  },	  
+  "THEME": {
+    "description": "Put the theme name you want to use. Avilable themes are EN,SI and many more..",
+     "value": "SI"	  
   },
   "MODE": {
     "description": "Worktype of your bot. Use public or private, if it is private then only bot number can use it. If public then everyone can use it.",
