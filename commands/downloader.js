@@ -395,6 +395,13 @@ async(Suhail, citel, text) => {
     let VidTime = Math.floor(i.timestamp* 60);
     if( VidTime  >= videotime) return await citel.reply(`*_Can't dowanload, video file too big_*`);
     let titleYt = infoYt.videoDetails.title;
+    let infoYt = await ytdl.getInfo(urlYt);
+    if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
+    let titleYt = infoYt.videoDetails.title;
+    let randomName = getRandom(".mp4");
+    citel.reply('*Downloadig:* '+titleYt)
+    const stream = ytdl(urlYt, {
+    filter: (info) => info.itag == 22 || info.itag == 18,
     let randomName = `./temp/${vid[1]}.mp4` ;
     const stream = ytdl(urlYt, {   filter: (info) => info.itag == 22 || info.itag == 18, }).pipe(fs.createWriteStream(`./${randomName}`));
     await new Promise((resolve, reject) => {stream.on("error", reject);stream.on("finish", resolve);});
