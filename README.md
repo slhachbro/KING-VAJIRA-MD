@@ -40,13 +40,11 @@
 [![Youtube](https://telegra.ph/file/eebe86c26e98ffeae39ea.jpg)](https://youtube.com/@gamingewingyt6216) [![FaceBook](https://telegra.ph/file/7d9dcbcad846a646f09f0.jpg)](https://www.facebook.com/profile.php?id=100078146263566&mibextid=ZbWKwL) [![Whatsapp group](https://telegra.ph/file/99460844d012cad1b7ee4.jpg)](https://chat.whatsapp.com/BvNbfgOzzo77urGqoNjThk)
 
 ## MONOGODB URL
-   1)     mongodb+srv://Saka:Saka@cluster0.jadwggo.mongodb.net/?retryWrites=true&w=majority
+ 1)     mongodb+srv://Saka:Saka@cluster0.jadwggo.mongodb.net/?retryWrites=true&w=majority
 
+ 2)     mongodb+srv://vajira:vajira@cluster0.hzwqrqq.mongodb.net/?retryWrites=true&w=majority
 
-   2)     mongodb+srv://vajira:vajira@cluster0.hzwqrqq.mongodb.net/?retryWrites=true&w=majority
-
-
-   3)     mongodb+srv://Suhail_Md:Suhail_Md@cluster1.0tlyzhm.mongodb.net/?retryWrites=true&w=majority
+ 3)     mongodb+srv://Suhail_Md:Suhail_Md@cluster1.0tlyzhm.mongodb.net/?retryWrites=true&w=majority
 
 ## Available Features
 	
