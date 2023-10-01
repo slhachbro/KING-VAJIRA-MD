@@ -271,11 +271,11 @@ smd({
 	const apkSize = parseInt(data.size);
 	if(apkSize > 100) return citel.send(`❌ File size bigger than 150mb.`);
        const url = data.dllink;
-	 let  inf  ="*App Name :* " +data.name;
-         inf +="\n*App id        :* " +data.package;
-         inf +="\n*Last Up       :* " +data.lastup;
-         inf +="\n*App Size     :* " +data.size;
-        // inf +="\n*App Link     :* " +data.dllink;
+	 let  inf  ="📲*App Name :* " +data.name;
+         inf +="\n⏳ *App id        :* " +data.package;
+         inf +="\n📩 *Last Up       :* " +data.lastup;
+         inf +="\n📊 *App Size     :* " +data.size;
+        // inf +="\n💌 *App Link     :* " +data.dllink;
 	inf +="\n\n "+ Config.caption
          
 
