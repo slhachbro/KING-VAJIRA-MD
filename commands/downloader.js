@@ -406,7 +406,7 @@ if (!text) return await citel.send('*Need video name*')
                     stream.on("error", reject);
                     stream.on("finish", resolve);
                 });
-                let stats = fs.statSync(`./${randomName}`);
+                 let stats = fs.statSync(`./${randomName}`);
                 let fileSizeInBytes = stats.size;
                 let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
                 if (fileSizeInMegabytes <= dlsize) {
