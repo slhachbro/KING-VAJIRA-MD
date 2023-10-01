@@ -33,6 +33,7 @@ module.exports = {
   autoreaction: process.env.AUTO_REACTION || 'false',  //  | 'cmd' | 'true' | 'all' |
   antibadword : process.env.ANTI_BAD_WORD || 'nobadwordokeyuntillYouPutAnWordHere',
   alwaysonline: process.env.WAPRESENCE || '', // 'unavailable' | 'available' | 'composing' | 'recording' | 'paused'
+  voice  :  process.env.AUTO_VOICE === undefined ? true : process.env.AUTO_VOICE, 	
   antifake : 'null', // process.env.FAKE_COUNTRY_CODE ||'212',
   readmessage: process.env.READ_MESSAGE || 'false',   //  | 'false' | 'true' | 
   readcmds : process.env.READ_COMMANDS || 'false',    //  | 'false' | 'true' | 
