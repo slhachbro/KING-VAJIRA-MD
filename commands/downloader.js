@@ -381,12 +381,15 @@ smd({pattern: "tts",desc: "text to speech.",category: "downloader",filename: __f
 
     )
     //---------------------------------------------------------------------------
-smd({pattern: "video", desc: "Downloads video from yt.", category: "downloader",filename: __filename,use: '<faded-Alan Walker>',},
-async(Suhail, citel, text) => {
-  text = text ? text : citel.quoted && citel.quoted.text ? citel.quoted.text : ""
-  
-if (!text) return await citel.send('*Need video name*') 
-            let yts = require("secktor-pack");
+smd({
+	  pattern: "video",
+          desc: "Downloads video from yt.",
+          category: "downloader",
+          filename: __filename,
+          use: '<faded-Alan Walker>',
+        },
+        async(Void, citel, text) => {
+            let yts = require("suhail-pack");
             let search = await yts(text);
             let anu = search.videos[0];
             let urlYt = anu.url
