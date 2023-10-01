@@ -299,7 +299,7 @@ axios.get(url, { responseType: 'stream' })
 	
 	
 
-	
+	/*
 	
   if(!text) return citel.reply(`*_Please Give Me App Name_*`);
 let searc = await search(text);
@@ -519,7 +519,7 @@ smd({pattern: "play", alias: ["audio"],desc: "Downloads audio from youtube.",cat
            
            
             
-           
+           /*
            
     
     
