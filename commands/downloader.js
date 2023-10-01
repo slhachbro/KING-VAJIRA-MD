@@ -172,7 +172,7 @@ smd({pattern: "tiktok",alias :  ['tt','ttdl'],desc: "Downloads Tiktok Videos Via
  else return await citel.send("Error While Downloading Your Video") 
 })
 //---------------------------------------------------------------------------
-/*
+
 smd({
             pattern: "tiktok",
 	          alias :  ['tt','ttdl'],
