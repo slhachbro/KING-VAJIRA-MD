@@ -94,9 +94,9 @@ const store = makeInMemoryStore({   logger: pino().child({ level: "silent", stre
   sᴜʜᴀɪʟ_ᴍᴅ.smd({pattern: "ping",desc: "To check ping",category: "general", filename: __filename,},
 async(Suhail, citel) => {
     var inital = new Date().getTime();
-    const { key } = await citel.reply('*Testing Vajira Bot Ping!!!*');
+    const { key } = await citel.reply('*Testing Ping!!!*');
     var final = new Date().getTime();
-    return await citel.send('*Pong*\n *' + (final - inital) + ' ms* ' , { edit: key } , "", citel );
+    return await citel.send('*Pong Vajira*\n *' + (final - inital) + ' ms* ' , { edit: key } , "", citel );
 });
 
 
