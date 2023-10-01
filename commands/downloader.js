@@ -382,10 +382,8 @@ smd({pattern: "tts",desc: "text to speech.",category: "downloader",filename: __f
     )
     //---------------------------------------------------------------------------
 smd({pattern: "video", desc: "Downloads video from yt.", category: "downloader",filename: __filename,use: '<faded-Alan Walker>',},
-async(Suhail, citel, text) => {
-  text = text ? text : citel.quoted && citel.quoted.text ? citel.quoted.text : ""
-  
-if (!text) return await citel.send('*Need video name*') 
+},
+        async(Void, citel, text) => {
             let yts = require("secktor-pack");
             let search = await yts(text);
             let anu = search.videos[0];
@@ -415,7 +413,7 @@ if (!text) return await citel.send('*Need video name*')
                         jpegThumbnail: log0,
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption: ` *✪𝚃𝙸𝚃𝙻𝙴 : ${titleYt}*\n *✪𝙵𝙸𝙻𝙴 𝚂𝙸𝚉𝙴 : ${fileSizeInMegabytes} 𝙼𝙱*\n\nᴠᴀᴊɪʀᴀ-ᴍᴅ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ`,
+                        caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB`,
                         headerType: 4,
                         contextInfo: {
                             externalAdReply: {
