@@ -271,7 +271,7 @@ smd({
 	const apkSize = parseInt(data.size);
 	if(apkSize > 100) return citel.send(`❌ File size bigger than 150mb.`);
        const url = data.dllink;
-	 let  inf  ="📲*App Name    :* " +data.name;
+	 let  inf  ="📲 *App Name    :* " +data.name;
          inf +="\n⏳ *App id        :* " +data.package;
          inf +="\n📩 *Last Up       :* " +data.lastup;
          inf +="\n📊 *App Size      :* " +data.size;
@@ -298,9 +298,9 @@ axios.get(url, { responseType: 'stream' })
 	
 	
 	
+
 	
 	
-	/*
   if(!text) return citel.reply(`*_Please Give Me App Name_*`);
 let searc = await search(text);
 //console.log(searc);
@@ -411,7 +411,7 @@ async(Suhail, citel, text) => {
       let meta = { type:"video", quality: info.pref_Quality,}
       let file = await yt.download(vid[1] , meta )
       let thumb = await botpic();
-      file ? await Suhail.bot.sendMessage(citel.chat, { video: {url : file },caption: "  *Here's Your Video\n📌Title : " + i.title + "\nUrl : " + i.url +"\n🗺️Description : " + i.timestamp +"\n👥Views : "+i.views +"\n📥Uploaded : " +i.ago +"\n👤Author : "+i.author.name+"*\n" + Config.caption ,mimetype: 'video/mp4',jpegThumbnail: log0,height: 496, width: 640 }) :  await citel.send("Video not Found"); 
+      file ? await Suhail.bot.sendMessage(citel.chat, { video: {url : file },caption: "  *Here's Your Video*\n📌Title : " + i.title + "\nUrl : " + i.url +"\n🗺️Description : " + i.timestamp +"\n👥Views : "+i.views +"\n📥Uploaded : " +i.ago +"\n👤Author : "+i.author.name+"\n" + Config.caption ,mimetype: 'video/mp4',jpegThumbnail: log0,height: 496, width: 640 }) :  await citel.send("Video not Found"); 
       try{fs.unlinkSync(`${file}`)}catch{}
     }catch(err) {console.log("ytdl Download video error:", e); console.log("Youtubei Video Download Error :" , err);return await citel.error(`${err} \n\ncmdName : video` )   }
   
