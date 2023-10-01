@@ -411,11 +411,11 @@ if (!text) return await citel.send('*Need video name*')
                 let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
                 if (fileSizeInMegabytes <= dlsize) {
                     let buttonMessage = {
-                        video: fs.readFileSync(`./${randomName}`),
+                         video: fs.readFileSync(`./${randomName}`),
                         jpegThumbnail: log0,
                         mimetype: 'video/mp4',
                         fileName: `${titleYt}.mp4`,
-                        caption: ` *✪𝚃𝙸𝚃𝙻𝙴 : ${titleYt}*\n *✪𝙵𝙸𝙻𝙴 𝚂𝙸𝚉𝙴 : ${fileSizeInMegabytes} 𝙼𝙱*\n\nᴠᴀᴊɪʀᴀ-ᴍᴅ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ`,
+                        caption: ` ⿻ Title : ${titleYt}\n ⿻ File Size : ${fileSizeInMegabytes} MB`,
                         headerType: 4,
                         contextInfo: {
                             externalAdReply: {
