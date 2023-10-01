@@ -255,44 +255,58 @@ smd({
             use: '<add sticker url.>',
         },
 
-        async(Suhail, citel, text) => {
-        if(!text )return citel.reply("*_Give me App Name_*");
-
-	const getRandom = (ext) => { return `${Math.floor(Math.random() * 10000)}${ext}`; };
-	let randomName = getRandom(".apk");
-	const filePath = `./temp/${randomName}`;     // fs.createWriteStream(`./${randomName}`)
-        const {  search , download } = require('aptoide-scraper')
-	let searc = await search(text);          //console.log(searc);
-	let data={};
-	if(searc.length){ data = await download(searc[0].id); }
-	else return citel.send("*_APP not Found, Try Other Name_*");
-	
-	
-	const apkSize = parseInt(data.size);
-	if(apkSize > 100) return citel.send(`❌ File size bigger than 150mb.`);
-       const url = data.dllink;
-	 let  inf  ="*App Name :* " +data.name;
-         inf +="\n*App id        :* " +data.package;
-         inf +="\n*Last Up       :* " +data.lastup;
-         inf +="\n*App Size     :* " +data.size;
-        // inf +="\n*App Link     :* " +data.dllink;
-	inf +="\n\n "+ Config.caption
-         
-
-axios.get(url, { responseType: 'stream' })
-  .then(response => {
-    const writer = fs.createWriteStream(filePath);
-    response.data.pipe(writer);
-    return new Promise((resolve, reject) => {writer.on('finish', resolve);writer.on('error', reject);});
-  }).then(() => {	
-	let buttonMessage = {document: fs.readFileSync(filePath),mimetype: 'application/vnd.android.package-archive',fileName: data.name+`.apk`,caption : inf}
-    Suhail.bot.sendMessage(citel.chat, buttonMessage, { quoted: citel })
-    console.log('Apk File downloaded successfully');  
-    try{ fs.unlink(filePath); }catch{}
-  }) .catch(error => {
-	try{ fs.unlink(filePath); }catch{}
-    return citel.send('*_Apk not Found, Sorry_*')//:', error.message);
-  });
+        const { tlang, botpic, cmd, prefix, runtime, Config, formatp, fetchJson } = require('../lib')
+const { download} = require('aptoide-scraper')
+cmd({
+    pattern: "downapk",
+    alias: ["ps","apk","playstore"],
+    desc: "download playstore app",
+    react: "🏷️",
+    category: "downloader",
+    filename: __filename,
+},
+async (Void, citel, text) => {
+if (!text) return
+try {
+let result = await download(text)
+ const applink = result.dllink
+    const getname = result.name
+    const icon = result.icon
+    const lastupdate = result.lastup
+    const packagename = result.package
+    const size = result.size
+      await Void.sendMessage(citel.chat, {
+        image: {
+            url: icon,
+        },
+        caption: `
+        \n─────────────────
+        \n⏳ *Playstore Download*
+        
+        \n📲 *App name:* ${getname}
+        
+        \n📩 *Last update:* ${lastupdate}
+        
+        \n🖥️ *Package name:* ${packagename}
+        
+        \n📊 *File size:* ${size}
+        
+        \n💌 𝙰𝙿𝙿 𝙳𝙾𝚆𝙽𝙻𝙾𝙳 ✅`,
+    })
+    return Void.sendMessage(citel.chat, {
+        document: {
+            url: applink,
+        },
+        mimetype: "application/vnd.android.package-archive",
+        fileName: getname,
+    }, {
+        quoted: citel,
+    });
+  } catch (err) {
+    console.error(err);
+    citel.reply(`❌ An error occurred while processing your request. Please try again later.${err}`);
+  }
+})
 	
 	
 	
