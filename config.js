@@ -26,12 +26,12 @@ module.exports = {
   botbgm: process.env.BOT_BGM || 'false',
   ownername:  process.env.OWNER_NAME || `It'x vajira`,
   author:  process.env.PACK_AUTHER || '',
-  errorChat : process.env.ERROR_CHAT|| '', // put 'chat' here to send error in chat ,where it accures
+  errorChat : process.env.ERROR_CHAT|| 'chat', // put 'chat' here to send error in chat ,where it accures
   read_status : process.env.AUTO_READ_STATUS || 'false',
   save_status : process.env.AUTO_SAVE_STATUS || 'false',
   packname:  process.env.PACK_NAME || "\t   𓅋 vajira 𓃮 \n\nᴋɪss ʍᴇ...💋\n\nᴄʟօsᴇ ყσυɾ ᴇყᴇs...👁️🙈\n\nʍɪss ʍᴇ...♥️\n\n\n   -ᴘʟᴇᴀsᴇ ᴅᴏɴ'ᴛ ᴛᴀӄᴇ 🚮 \n\n--- ρυвʟɪᴄ вσт нᴇʀᴇ ---" ,
-  autoreaction: process.env.AUTO_REACTION || 'false',  //  | 'cmd' | 'true' | 'all' |
-  antibadword : process.env.ANTI_BAD_WORD || 'nobadwordokeyuntillYouPutAnWordHere',
+  autoreaction: process.env.AUTO_REACTION || 'cmd',  //  | 'cmd' | 'true' | 'all' |
+  antibadword : process.env.ANTI_BAD_WORD || 'Huththa,Pakaya,ponnaya,kariya,Fuck',
   alwaysonline: process.env.WAPRESENCE || '', // 'unavailable' | 'available' | 'composing' | 'recording' | 'paused' 	
   antifake : 'null', // process.env.FAKE_COUNTRY_CODE ||'212',
   readmessage: process.env.READ_MESSAGE || 'false',   //  | 'false' | 'true' | 
@@ -47,9 +47,9 @@ module.exports = {
   BRANCH: process.env.BRANCH || 'main',
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME,
   HEROKU_API_KEY: process.env.HEROKU_API_KEY,
-  REMOVE_BG_KEY: process.env.REMOVE_BG_KEY || "",
-  caption :process.env.CAPTION || "```📥ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴠᴀᴊɪʀᴀ-ᴍᴅ📥```",   //*『sᴜʙsᴄʀɪʙᴇ • sᴜʜᴀɪʟ ᴛᴇᴄʜ』*\n youtube.com/@suhailtechinfo0"),
-  OPENAI_API_KEY: process.env.OPENAI_API_KEY ||'' ,
+  REMOVE_BG_KEY: process.env.REMOVE_BG_KEY || "9L35hT7pWYXHgWjVZpkc5scp",
+  caption :process.env.CAPTION || "```📥ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴠᴀᴊɪʀᴀ-ᴍᴅ📥```",   『sᴜʙsᴄʀɪʙᴇ • ᴠᴀᴊɪʀᴀ ᴛᴇᴄʜ』*\n youtube.com/@gamingewingyt6216"),
+  OPENAI_API_KEY: process.env.OPENAI_API_KEY ||'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' ,
   VERSION: process.env.VERSION || 'v.1.2.2',
   LANG: process.env.THEME ? process.env.THEME.toUpperCase() : 'VAJIRA',
   menu : process.env.MENU || '', /**  Available @MENU @Schemes 1: Aztec_Md, 2: A17_Md, 3: Vajira-Md Default ---------- If Not Choose then it Randomely Pic One Of Them Each time **/
