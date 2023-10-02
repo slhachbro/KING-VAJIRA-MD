@@ -34,7 +34,7 @@
   "AUTO_READ_STATUS": {
     "description": "Fill the value true if you want bot view your Statuses.",
     "required" :false,
-    "value": "true"
+    "value": "false"
   }, 
   "MSGS_IN_LOG": {
     "description": "Fill the value true if you want to see Messages in Console.",
