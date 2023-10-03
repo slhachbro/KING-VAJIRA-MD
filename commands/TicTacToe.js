@@ -61,9 +61,9 @@ const stickers = [
  ];
 
 /**
-* Thanks to @siraj-7
+* Thanks to Vajira-Md
 * For These Dice Stickers
-* @author : Suhail Tech Info
+* @author : Vajira Tech Info
 **/
 
 smd(
