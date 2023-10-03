@@ -1,6 +1,6 @@
 while true
 do
-echo "Starting Suhail-Md..."
+echo "Starting Vajira-Md..."
 node lib/client.js
 done
 
