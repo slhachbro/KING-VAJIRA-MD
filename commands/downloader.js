@@ -271,7 +271,7 @@ let result = await download(text)
             url: icon,
         },
         caption: `
-        \n─────────────────
+        \n👑KING VAJIRA👑 APK DOWNLOADER📥
         \n⏳ *Playstore Download*
         
         \n📲 *App name:* ${getname}
