@@ -383,45 +383,34 @@ smd({pattern: "tts",desc: "text to speech.",category: "downloader",filename: __f
 
     )
     //---------------------------------------------------------------------------
-smd({pattern: "video", desc: "Downloads video from yt.", category: "downloader",filename: __filename,use: '<faded-Alan Walker>',},
-async(Suhail, citel, text) => {
-  text = text ? text : citel.quoted && citel.quoted.text ? citel.quoted.text : ""
-  
-  if (!text) return citel.reply(`Example : ${prefix}video Back in black`);
-  let yts = require("secktor-pack")
-  let search = await yts(text);
-  let i = search.all[1] ;
-  let cap = "\t *---Yt Song Searched Data---*   \n\n📌Title : " + i.title + "\nUrl : " + i.url +"\n🗺️Description : " + i.timestamp +"\n👥Views : "+i.views +"\n📥Uploaded : " +i.ago +"\n👤Author : "+i.author.name+"\n\n\nVideo To Take Mp4 \nsong To Take Mp3 \n⚜️...ɢᴇɴᴀʀᴀᴛᴇᴅ ʙʏ ᴠᴀᴊɪʀᴀ ...⚜️" ;
-  Suhail.bot.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
-  let vid = ytIdRegex.exec(text) || [], urlYt = vid[0] || false;
-  if (!urlYt) { let yts = require("secktor-pack"),search = await yts(text),anu = search.videos[0];urlYt = anu.url;  }
-  vid = ytIdRegex.exec(urlYt);
-  try{
-    let infoYt = await ytdl.getInfo(urlYt);
-    let VidTime = Math.floor(i.timestamp* 60);
-    if( VidTime  >= videotime) return await citel.reply(`*_Can't dowanload, video file too big_*`);
-    await citel.send(`_🎶Downloading ${info.title}?_`);
-    let titleYt = infoYt.videoDetails.title;
-    let randomName = `./temp/${vid[1]}.mp4` ;
-    const stream = ytdl(urlYt, {   filter: (info) => info.itag == 22 || info.itag == 18, }).pipe(fs.createWriteStream(`./${randomName}`));
-    await new Promise((resolve, reject) => {stream.on("error", reject);stream.on("finish", resolve);});
-    let buttonMessage = { video: fs.readFileSync(randomName),mimetype: 'video/mp4',caption: " 📥 Here's Your Video 📥\n" + Config.caption ,height: 496, width: 640,}
-    await Suhail.bot.sendMessage(citel.chat, buttonMessage, { quoted: citel })
-    try { fs.unlinkSync(randomName) } catch{};
-
-  }catch(e){
-  //  
-    console.log("here now,")
-    try{
-      let info = await yt.getInfo(vid[1]);
-      if( info.duration  >= videotime) return await citel.reply(`*_Can't dowanload, video file too big_*`);
-      await citel.send(`_🎶Downloading ${info.title}?_`);
-      let meta = { type:"video", quality: info.pref_Quality,}
-      let file = await yt.download(vid[1] , meta )
-      let thumb = await botpic();
-      file ? await Suhail.bot.sendMessage(citel.chat, { video: {url : file },caption: "  *📥 Here's Your Video 📥*\n" + Config.caption ,mimetype: 'video/mp4',jpegThumbnail: log0,height: 496, width: 640 }) :  await citel.send("Video not Found"); 
-      try{fs.unlinkSync(`${file}`)}catch{}
-    }catch(err) {console.log("ytdl Download video error:", e); console.log("Youtubei Video Download Error :" , err);return await citel.error(`${err} \n\ncmdName : video` )   }
+Function({
+	pattern: 'video ?(.*)',
+	fromMe: isPublic,
+	desc: Lang.VIDEO_DESC,
+	type: 'download'
+}, async (message, match, client) => {
+	match = match || message.reply_message.text
+	if (!match) return message.reply('*Need Youtube video url or query*')
+	if (isUrl(match) && match.includes('youtu')) {
+		const id = ytIdRegex.exec(match)
+	 try {
+	  const result = await video(id[1]);
+	  if (!result) return await message.reply('_Failed to download_');
+	  return await message.send(result.file, 'video', { quoted: message.data, caption: result.title });
+	  } catch (error) {
+	  return await message.send('```' + error.message + '```')
+	  }
+	}
+	const search = await yts(match)
+	if (search.all.length < 1) return await message.reply(Lang.NO_RESULT);
+	let no = 1;
+	let listText = `${t}Search results for ${match}:${t}\n\n*Format: video*\n_To download, please reply with the desired title number._\n\n`;
+	for (let i of search.all) {
+	if (i.type == 'video') {
+    listText += `${no++}. *${i.title}*\nhttps://youtu.be/${i.url.match(/(?<=\?v=)[^&]+/)[0]}\n\n`;
+    }
+    }
+    await message.send(listText);
   
   
   }
