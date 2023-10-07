@@ -592,8 +592,8 @@ if(Group){
 
 }catch(e){return await msg.error(`${e}\ncmdName: Group info`),console.log("error in group info,\n"  , e) }
   
-}else return await msg.send(`*_Uhh Dear Give me Query From Bellow Options_*\n_1:- .group Mute_\n_2:- .group Unmute_\n_3:- .group Info_`)
-    //  let buttons = [{ buttonId: `${prefix}group open`, buttonText: { displayText: "📍Unmute",},type: 1,},{buttonId: `${prefix}group close`,buttonText: {displayText: "📍Mute",},type: 1, },];     await Suhail.bot.sendButtonText(msg.chat,buttons,`Group Mode`, Suhail.bot.user.name, msg);
+}else return await msg.send(`*_Uhh Dear Give me Query From Bellow Options_*\n_🚫 1:- .Mute_\n_⛔ 2:- .Unmute_\n_3:- .group Info_`)
+      let buttons = [{ buttonId: `${prefix}group open`, buttonText: { displayText: "📍Unmute",},type: 1,},{buttonId: `${prefix}group close`,buttonText: {displayText: "📍Mute",},type: 1, },];     await Suhail.bot.sendButtonText(msg.chat,buttons,`Group Mode`, Suhail.bot.user.name, msg);
            
 
         }
