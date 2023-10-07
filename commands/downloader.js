@@ -388,39 +388,57 @@ async(Suhail, citel, text) => {
   text = text ? text : citel.quoted && citel.quoted.text ? citel.quoted.text : ""
   
   let yts = require("secktor-pack");
-  if (!tax) return citel.send(`Example: ${prefix}video Surah Fateh`);
-  let search = await yts(tax);
-  let anu = search.videos[0];
-  let cap = "\t *---Yt Song Searched Data---*   \n\n📌Title : " + i.title + "\nUrl : " + i.url +"\n🗺️Description : " + i.timestamp +"\n👥Views : "+i.views +"\n📥Uploaded : " +i.ago +"\n👤Author : "+i.author.name+"\n\n\nVideo To Take Mp4 \nsong To Take Mp3 \n⚜️...ɢᴇɴᴀʀᴀᴛᴇᴅ ʙʏ ᴠᴀᴊɪʀᴀ ...⚜️" ;
-  Suhail.bot.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
-  let vid = ytIdRegex.exec(text) || [], urlYt = vid[0] || false;
-  if (!urlYt) { let yts = require("secktor-pack"),search = await yts(text),anu = search.videos[0];urlYt = anu.url;  }
-  vid = ytIdRegex.exec(urlYt);
-  try{
-    let infoYt = await ytdl.getInfo(urlYt);
-    if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`Video Size too Large!`);
-    let titleYt = infoYt.videoDetails.title;
-    let randomName = getRandom(".mp4");
-    citel.reply('*𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙸𝙽𝙶:* '+tax)
-    const stream = ytdl(urlYt, {filter: (info) => info.itag == 22 || info.itag == 18,}).pipe(fs.createWriteStream(`./${randomName}`));
-    await new Promise((resolve, reject) => {stream.on("error", reject);stream.on("finish", resolve);});
-    let buttonMessage = { video: fs.readFileSync(randomName),mimetype: 'video/mp4',caption: " 📥 Here's Your Video 📥\n" + Config.caption ,height: 496, width: 640,}
-    await Suhail.bot.sendMessage(citel.chat, buttonMessage, { quoted: citel })
-    try { fs.unlinkSync(randomName) } catch{};
-
-  }catch(e){
-  //  
-    console.log("here now,")
-    try{
-      let info = await yt.getInfo(vid[1]);
-      if( info.duration  >= videotime) return await citel.reply(`*_Can't dowanload, video file too big_*`);
-      await citel.send(`_🎶Downloading ${info.title}?_`);
-      let meta = { type:"video", quality: info.pref_Quality,}
-      let file = await yt.download(vid[1] , meta )
-      let thumb = await botpic();
-      file ? await Suhail.bot.sendMessage(citel.chat, { video: {url : file },caption: "  *📥 Here's Your Video 📥*\n" + Config.caption ,mimetype: 'video/mp4',jpegThumbnail: log0,height: 496, width: 640 }) :  await citel.send("Video not Found"); 
-      try{fs.unlinkSync(`${file}`)}catch{}
-    }catch(err) {console.log("ytdl Download video error:", e); console.log("Youtubei Video Download Error :" , err);return await citel.error(`${err} \n\ncmdName : video` )   }
+    if (!tax) return citel.send(`Example: ${prefix}video Surah Fateh`);
+        let search = await yts(tax);
+        let anu = search.videos[0];
+        let urlYt = anu.url
+        const getRandom = (ext) => {
+            return `${Math.floor(Math.random() * 10000)}${ext}`;
+        };
+            let infoYt = await ytdl.getInfo(urlYt);
+            if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`Video Size too Large!`);
+            let titleYt = infoYt.videoDetails.title;
+            let randomName = getRandom(".mp4");
+            citel.reply('*𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙸𝙽𝙶:* '+tax)
+            const stream = ytdl(urlYt, {
+                    filter: (info) => info.itag == 22 || info.itag == 18,
+                })
+                .pipe(fs.createWriteStream(`./${randomName}`));
+            await new Promise((resolve, reject) => {
+                stream.on("error", reject);
+                stream.on("finish", resolve);
+            });
+            let stats = fs.statSync(`./${randomName}`);
+            let fileSizeInBytes = stats.size;
+            let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
+            if (fileSizeInMegabytes <= dlsize) {
+                let Maher = {
+                    video: fs.readFileSync(`./${randomName}`),
+                    jpegThumbnail: log0,
+        
+                    mimetype: 'video/mp4',
+                    caption: `*╰┈➤ 𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 ${name.botname}*`,
+        height: 640,
+                    width: 780,
+                    headerType: 4,
+                    contextInfo: {
+                        externalAdReply: {
+                            title: `${name.ownername}`,
+                            body: ``,
+                            thumbnail: await getBuffer(search.all[0].thumbnail),
+                            renderLargerThumbnail: true,
+                            mediaType: 4,
+                            mediaUrl: ``,
+                            sourceUrl: `${waUrl}`,
+                        }
+                    }
+                }
+             bot.sendMessage(citel.chat, Maher, { quoted: citel })
+             return fs.unlinkSync(`./${randomName}`);
+            } else {
+                citel.reply(`File Size Bigger Than 100MB..`);
+            }
+            return fs.unlinkSync(`./${randomName}`);
   
   
   }
