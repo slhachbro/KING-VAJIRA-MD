@@ -547,9 +547,9 @@ smd({
             let action = text.toLowerCase();
 
             if (action.startsWith("close") || action.startsWith("mute") ) {
-                await Suhail.bot.groupSettingUpdate(msg.chat, "announcement").then((res) => msg.reply(`*_Group Chat Muted!!!_*`)).catch((err) => msg.error(err));
+                await Suhail.bot.groupSettingUpdate(msg.chat, "announcement").then((res) => msg.reply(`*_කණ්ඩායම් කතාබස් නිහඬ කර ඇත!!!_*`)).catch((err) => msg.error(err));
             } else if (text.toLowerCase().startsWith("open")||text.toLowerCase().startsWith("unmute") ){
-                await Suhail.bot.groupSettingUpdate(msg.chat, "not_announcement").then((res) => msg.reply(`*_Group Chat Unmuted!!!_*`)).catch((err) => msg.error(err));
+                await Suhail.bot.groupSettingUpdate(msg.chat, "not_announcement").then((res) => msg.reply(`*_කණ්ඩායම් කතාබස් නැවත ලභා දෙනු ඇත!!!_*`)).catch((err) => msg.error(err));
             }
 else if( action.startsWith("detail") || action.startsWith("info") ){
 try{
@@ -592,7 +592,7 @@ if(Group){
 
 }catch(e){return await msg.error(`${e}\ncmdName: Group info`),console.log("error in group info,\n"  , e) }
   
-}else return await msg.send(`*_Uhh Dear Give me Query From Bellow Options_*\n_1:- .Mute_\n_2:- .Unmute_\n_3:- .group Info_`)
+}else return await msg.send(`*_Uhh Dear Give me Query From Bellow Options_*\n_1:- .Group Mute_\n_2:- .Group Unmute_\n_3:- .group Info_`)
     //  let buttons = [{ buttonId: `${prefix}group open`, buttonText: { displayText: "📍Unmute",},type: 1,},{buttonId: `${prefix}group close`,buttonText: {displayText: "📍Mute",},type: 1, },];     await Suhail.bot.sendButtonText(msg.chat,buttons,`Group Mode`, Suhail.bot.user.name, msg);
            
 
