@@ -387,10 +387,10 @@ smd({pattern: "video", desc: "Downloads video from yt.", category: "downloader",
 async(Suhail, citel, text) => {
   text = text ? text : citel.quoted && citel.quoted.text ? citel.quoted.text : ""
   
-  if (!text) return citel.reply(`Example : ${prefix}video Back in black`);
-  let yts = require("secktor-pack")
-  let search = await yts(text);
-  let i = search.all[1] ;
+  let yts = require("secktor-pack");
+  if (!tax) return citel.send(`Example: ${prefix}video Surah Fateh`);
+  let search = await yts(tax);
+  let anu = search.videos[0];
   let cap = "\t *---Yt Song Searched Data---*   \n\n📌Title : " + i.title + "\nUrl : " + i.url +"\n🗺️Description : " + i.timestamp +"\n👥Views : "+i.views +"\n📥Uploaded : " +i.ago +"\n👤Author : "+i.author.name+"\n\n\nVideo To Take Mp4 \nsong To Take Mp3 \n⚜️...ɢᴇɴᴀʀᴀᴛᴇᴅ ʙʏ ᴠᴀᴊɪʀᴀ ...⚜️" ;
   Suhail.bot.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
   let vid = ytIdRegex.exec(text) || [], urlYt = vid[0] || false;
@@ -398,12 +398,11 @@ async(Suhail, citel, text) => {
   vid = ytIdRegex.exec(urlYt);
   try{
     let infoYt = await ytdl.getInfo(urlYt);
-    let VidTime = Math.floor(i.timestamp* 60);
-    if( VidTime  >= videotime) return await citel.reply(`*_Can't dowanload, video file too big_*`);
-    await citel.send(`_🎶Downloading ${info.title}?_`);
+    if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`Video Size too Large!`);
     let titleYt = infoYt.videoDetails.title;
-    let randomName = `./temp/${vid[1]}.mp4` ;
-    const stream = ytdl(urlYt, {   filter: (info) => info.itag == 22 || info.itag == 18, }).pipe(fs.createWriteStream(`./${randomName}`));
+    let randomName = getRandom(".mp4");
+    citel.reply('*𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳𝙸𝙽𝙶:* '+tax)
+    const stream = ytdl(urlYt, {filter: (info) => info.itag == 22 || info.itag == 18,}).pipe(fs.createWriteStream(`./${randomName}`));
     await new Promise((resolve, reject) => {stream.on("error", reject);stream.on("finish", resolve);});
     let buttonMessage = { video: fs.readFileSync(randomName),mimetype: 'video/mp4',caption: " 📥 Here's Your Video 📥\n" + Config.caption ,height: 496, width: 640,}
     await Suhail.bot.sendMessage(citel.chat, buttonMessage, { quoted: citel })
