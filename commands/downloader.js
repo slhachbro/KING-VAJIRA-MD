@@ -266,7 +266,7 @@ let result = await download(text)
     const lastupdate = result.lastup
     const packagename = result.package
     const size = result.size
-      await Suhail.bot.sendMessage(citel.chat, {quoted: citel })
+      await Suhail.bot.sendMessage(citel.chat, {
         image: {
             url: icon,  
         },
