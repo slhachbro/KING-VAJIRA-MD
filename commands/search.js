@@ -300,8 +300,7 @@ smd({
     for (let i = 0; i < name2; i++) {
         if (imgObjects[i] && imgObjects[i][0][0]["444383007"][1]) {
             let url = imgObjects[i][0][0]["444383007"][1][3][0]; // the url
-            urlsArray.push(url);
-            quoted: citel,
+            urlsArray.push(url);         
         }
     }
 
