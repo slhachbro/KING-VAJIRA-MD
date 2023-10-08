@@ -383,47 +383,29 @@ smd({pattern: "tts",desc: "text to speech.",category: "downloader",filename: __f
 
     )
     //---------------------------------------------------------------------------
-smd({pattern: "video", desc: "Downloads video from yt.", category: "downloader",filename: __filename,use: '<faded-Alan Walker>',},
-async(Suhail, citel, text) => {
-  text = text ? text : citel.quoted && citel.quoted.text ? citel.quoted.text : ""
-  
-  if (!text) return citel.reply(`Example : ${prefix}video Back in black`);
-  let yts = require("secktor-pack")
-  let search = await yts(text);
-  let i = search.all[1] ;
-  let cap = "\t *---Yt Song Searched Data---*   \n\n📌Title : " + i.title + "\nUrl : " + i.url +"\n🗺️Description : " + i.timestamp +"\n👥Views : "+i.views +"\n📥Uploaded : " +i.ago +"\n👤Author : "+i.author.name+"\n\n\nVideo To Take Mp4 \nsong To Take Mp3 \n⚜️...ɢᴇɴᴀʀᴀᴛᴇᴅ ʙʏ ᴠᴀᴊɪʀᴀ ...⚜️" ;
-  Suhail.bot.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
-  let vid = ytIdRegex.exec(text) || [], urlYt = vid[0] || false;
-  if (!urlYt) { let yts = require("secktor-pack"),search = await yts(text),anu = search.videos[0];urlYt = anu.url;  }
-  vid = ytIdRegex.exec(urlYt);
-  try{
-    let infoYt = await ytdl.getInfo(urlYt);
-    let VidTime = Math.floor(i.timestamp* 60);
-    if( VidTime  >= videotime) return await citel.reply(`*_Can't dowanload, video file too big_*`);
-    await citel.send(`_🎶Downloading ${info.title}?_`);
-    let titleYt = infoYt.videoDetails.title;
-    let randomName = `./temp/${vid[1]}.mp4` ;
-    const stream = ytdl(urlYt, {   filter: (info) => info.itag == 22 || info.itag == 18, }).pipe(fs.createWriteStream(`./${randomName}`));
-    await new Promise((resolve, reject) => {stream.on("error", reject);stream.on("finish", resolve);});
-    let buttonMessage = { video: fs.readFileSync(randomName),mimetype: 'video/mp4',caption: "  Here's Your Video\n" + Config.caption ,height: 496, width: 640,}
-    await Suhail.bot.sendMessage(citel.chat, buttonMessage, { quoted: citel })
-    try { fs.unlinkSync(randomName) } catch{};
-
-  }catch(e){
-  //  
-    console.log("here now,")
-    try{
-      let info = await yt.getInfo(vid[1]);
-      if( info.duration  >= videotime) return await citel.reply(`*_Can't dowanload, video file too big_*`);
-      await citel.send(`_🎶Downloading ${info.title}?_`);
-      let meta = { type:"video", quality: info.pref_Quality,}
-      let file = await yt.download(vid[1] , meta )
-      let thumb = await botpic();
-      file ? await Suhail.bot.sendMessage(citel.chat, { video: {url : file },caption: "  *Here's Your Video*\n" + Config.caption ,mimetype: 'video/mp4',jpegThumbnail: log0,height: 496, width: 640 }) :  await citel.send("Video not Found"); 
-      try{fs.unlinkSync(`${file}`)}catch{}
-    }catch(err) {console.log("ytdl Download video error:", e); console.log("Youtubei Video Download Error :" , err);return await citel.error(`${err} \n\ncmdName : video` )   }
-  
-  
+cmd({
+            pattern: "video",
+            desc: "Downloads video from yt.",
+            category: "downloader",
+            filename: __filename,
+            use: '<faded-Alan Walker>',
+        },
+        async(Void, citel, text) => {
+            if (!text) return citel.reply(`Example : ${prefix}audio Back in black`)
+            let yts = require("secktor-pack");
+            let search = await yts(text)
+            const getRandom = (ext) => { return `${Math.floor(Math.random() * 10000)}${ext}`;  };
+                let urlYt = search.videos[0].url
+                let infoYt = await ytdl.getInfo(urlYt);
+                if (infoYt.videoDetails.lengthSeconds >= videotime) return citel.reply(`❌ Video file too big!`);
+                let titleYt = infoYt.videoDetails.title;
+                let randomName = getRandom(".mp4");
+                const stream = ytdl(urlYt, {  filter: (info) => info.itag == 22 || info.itag == 18,  })
+                    .pipe(fs.createWriteStream(`./${randomName}`));
+                await new Promise((resolve, reject) => {   stream.on("error", reject);   stream.on("finish", resolve);  });
+                let stats = fs.statSync(`./${randomName}`);
+                 await Void.sendMessage(citel.chat, {  video: fs.readFileSync(`./${randomName}`),jpegThumbnail: log0, mimetype: 'video/mp4',  caption: ` ❒ Title : ${titleYt}`, }, { quoted: citel })
+                 return fs.unlinkSync(`./${randomName}`);  
   }
 		    
 })
