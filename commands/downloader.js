@@ -268,7 +268,8 @@ let result = await download(text)
     const size = result.size
       await Suhail.bot.sendMessage(citel.chat, {
         image: {
-            url: icon,
+	    quoted: citel,
+            url: icon,  
         },
         caption: `
         \n👑KING VAJIRA👑 APK DOWNLOADER📥
