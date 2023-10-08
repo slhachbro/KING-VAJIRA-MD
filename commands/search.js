@@ -272,7 +272,6 @@ smd({
    let buttonMessage = {}
    let name1 = text.split("|")[0] || `Luffy`
    let name2 = text.split("|")[1] || `5`
- try {
     let urlsArray = [];
     const params = {
         q: name1, 
@@ -304,10 +303,12 @@ smd({
         }
     }
 
-for (let url of urlsArray) { Suhail.bot.sendMessage(citel.chat , {image : {url : url} } )  }
-} 
- catch (error) {   return citel.reply("*Google Images Not Working, Try it Later*"); }
+for (let url of urlsArray) { Suhail.bot.sendMessage(citel.chat , {image : {url : url }, caption `test` }, { quoted: citel });
+  
+           
+        }
 
+    )
  
  
  /*
