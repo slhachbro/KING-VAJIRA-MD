@@ -388,11 +388,6 @@ async(Suhail, citel, text) => {
   text = text ? text : citel.quoted && citel.quoted.text ? citel.quoted.text : ""
   
   if (!text) return citel.reply(`Example : ${prefix}video Back in black`);
-  let yts = require("secktor-pack")
-  let search = await yts(text);
-  let i = search.all[1] ;
-  let cap = "\t *---Yt Song Searched Data---*   \n\n📌Title : " + i.title + "\nUrl : " + i.url +"\n🗺️Description : " + i.timestamp +"\n👥Views : "+i.views +"\n📥Uploaded : " +i.ago +"\n👤Author : "+i.author.name+"\n\n\nVideo To Take Mp4 \nsong To Take Mp3 \n⚜️...ɢᴇɴᴀʀᴀᴛᴇᴅ ʙʏ ᴠᴀᴊɪʀᴀ ...⚜️" ;
-  Suhail.bot.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
   let vid = ytIdRegex.exec(text) || [], urlYt = vid[0] || false;
   if (!urlYt) { let yts = require("secktor-pack"),search = await yts(text),anu = search.videos[0];urlYt = anu.url;  }
   vid = ytIdRegex.exec(urlYt);
@@ -400,7 +395,6 @@ async(Suhail, citel, text) => {
     let infoYt = await ytdl.getInfo(urlYt);
     let VidTime = Math.floor(i.timestamp* 60);
     if( VidTime  >= videotime) return await citel.reply(`*_Can't dowanload, video file too big_*`);
-    await citel.send(`_🎶Downloading ${info.title}?_`);
     let titleYt = infoYt.videoDetails.title;
     let randomName = `./temp/${vid[1]}.mp4` ;
     const stream = ytdl(urlYt, {   filter: (info) => info.itag == 22 || info.itag == 18, }).pipe(fs.createWriteStream(`./${randomName}`));
@@ -415,7 +409,6 @@ async(Suhail, citel, text) => {
     try{
       let info = await yt.getInfo(vid[1]);
       if( info.duration  >= videotime) return await citel.reply(`*_Can't dowanload, video file too big_*`);
-      await citel.send(`_🎶Downloading ${info.title}?_`);
       let meta = { type:"video", quality: info.pref_Quality,}
       let file = await yt.download(vid[1] , meta )
       let thumb = await botpic();
