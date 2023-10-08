@@ -301,6 +301,7 @@ smd({
         if (imgObjects[i] && imgObjects[i][0][0]["444383007"][1]) {
             let url = imgObjects[i][0][0]["444383007"][1][3][0]; // the url
             urlsArray.push(url);
+            quoted: citel,
         }
     }
 
