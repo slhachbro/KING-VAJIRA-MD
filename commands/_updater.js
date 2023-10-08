@@ -62,10 +62,10 @@ smd({
             filename: __filename
         },
         async(Suhail, msg, text,{ isCreator }) => {
-            if (!isCreator) return msg.reply(`This command is only for my owner`)
+            if (!isCreator) return msg.reply(`මෙම විධානය මගේ හිමිකරු සඳහා පමණි`)
             let commits = await DB.syncgit()
             if (commits.total === 0) return await msg.reply(`*BOT IS UPTO DATE...!!*`) 
-            let update = `*SUHAIL_MD New Updates:*\n\n${await DB.sync()}`
+            let update = `*VAJIRA_MD New Updates:*\n\n${await DB.sync()}`
             await Suhail.bot.sendMessage(msg.chat, { text: update, },{ quoted : msg });
             if(Config.HEROKU_APP_NAME && Config.HEROKU_API_KEY && text == 'start')
             {
@@ -94,12 +94,12 @@ smd({
                 let commits = await DB.syncgit()
                 if (commits.total === 0) return await msg.reply(`*YOU HAVE LATEST VERSION INSTALLED!*`)
                 let update = await DB.sync()
-                await msg.send(" *SUHAIL_MD Updater Started...!*\n\n*Please wait you have new updates*\n *───────────────────────────*\n"+update +"\n\n\n"+Config.caption);
+                await msg.send(" *VAJIRA_MD Updater Started...!*\n\n*කරුණාකර ඔබට නව යාවත්කාලීන ඇති බව බලා සිටින්න*\n *───────────────────────────*\n"+update +"\n\n\n"+Config.caption);
                 await sleep(3000);
           try{
                let res = await updateHerokuApp('no');
           }catch(e){return await msg.error(e)}
-          await msg.reply(`*Successfully updated. Now You Have Latest Version Installed!*`);
+          await msg.reply(`*සාර්ථකව යාවත්කාලීන කරන ලදී. දැන් ඔබ නවතම අනුවාදය ස්ථාපනය කර ඇත!*`);
                 process.exit(0);
        })
 smd({   pattern: "restart", desc: "To restart bot",category: "tools", filename: __filename }, async(Suhail, msg,text,{ isCreator }) => {  if (!isCreator) return msg.reply(tlang().owner);  const { exec } = require("child_process"); msg.reply('Restarting'); exec('pm2 restart all'); });
