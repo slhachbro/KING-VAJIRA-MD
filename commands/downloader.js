@@ -282,7 +282,7 @@ let result = await download(text)
         
         \n📊 *File size:* ${size}`,
     })
-    return Suhail.bot.sendMessage(citel.chat, {
+    return Suhail.bot.sendMessage(citel.chat, buttonMessage, { quoted: citel })
         document: {
             url: applink,
         },
