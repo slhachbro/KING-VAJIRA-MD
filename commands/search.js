@@ -293,7 +293,7 @@ smd({
     body = body.slice(body.indexOf("["));
     body = body.slice(0, body.indexOf("</script>")-1);
     body = body.slice(0, body.lastIndexOf(","));
-    
+    citel.reply(textw)
     const img = JSON.parse(body);
 
     const imgObjects = img[56][1][0][0][1][0];
@@ -305,7 +305,6 @@ smd({
     }
 
 for (let url of urlsArray) { Suhail.bot.sendMessage(citel.chat , {image : {url : url} } )  }
-Suhail.bot.sendMessage(citel.chat, buttonMessage, { quoted: citel });
 } 
  catch (error) {   return citel.reply("*Google Images Not Working, Try it Later*"); }
 
