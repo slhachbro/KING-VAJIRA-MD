@@ -24,7 +24,7 @@
   "LEVEL_UP_MESSAGE": {
     "description": "Fill the value true if you want bot send Level up message in chat.",
     "required" :false,
-    "value": "true"
+    "value": "false"
   }, 
   "WAPRESENCE": {
     "description": "Fill the value: 'unavailable'(nothing) | 'available'(alwaysonline) | 'composing'(typing) | 'recording' | 'paused' ",
@@ -52,7 +52,7 @@
     "required" :false
   },
   "ALWAYS_ONLINE": {
-    "description": "Take it 'true' if you wanna show Always Onlline",
+    "description": "Take it 'true' if you wanna show Always Online",
     "value": "false",
     "required" :false
   },
@@ -61,32 +61,32 @@
     "value": "."
   },
   "OWNER_NUMBER": {
-    "description": "The phone numbers of the users who you want to be admin for the bot (should be in international format without + and multiple numbers must be separated by a comma \",\")",
+    "description": "ඔබට bot සඳහා පරිපාලක වීමට අවශ්‍ය පරිශීලකයින්ගේ දුරකථන අංක (+ නොමැතිව ජාත්‍යන්තර ආකෘතියෙන් තිබිය යුතු අතර බහු සංඛ්‍යා කොමාවකින් වෙන් කළ යුතුය \",\")",
     "value": "94766943622"
   },
    "SESSION_ID": {
-    "description": "Please put your SESSION_ID here,if you don't have visit\nhttps://replit.com/@VajiraRathnayak/KING-VAJIRA-MD?v=1"
+    "description": "කරුණාකර ඔබේ SESSION_ID මෙහි දමන්න,ඔබට නොමැති නම් visit\nhttps://replit.com/@VajiraRathnayak/KING-VAJIRA-MD?v=1"
   },
   "OPENAI_API_KEY": {
-    "description": "Please put your OPENAI api key here.Get it from beta.openai.com ",
+    "description": "කරුණාකර ඔබේ OPENAI api යතුර මෙහි දමන්න.එකෙන් ගන්න beta.openai.com ",
     "value": "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",
     "required" :false
   }, 
   "REMOVE_BG_KEY": {
-    "description": "Please put your REMOVE BG KEY here.Get it from removeBg.com ",
-    "value": "9L35hT7pWYXHgWjVZpkc5scp",
+    "description": "කරුණාකර ඔබේ REMOVE BG යතුර මෙහි දමන්න.Get it from removeBg.com ",
+    "value": "",
     "required" :false
   },
   "MONGODB_URI": {
-    "description": "Put your own Mongodb key. Its a secret String for Mongodb Connection.(Required)",
+    "description": "ඔබේම Mongodb යතුර දමන්න. එය Mongodb සම්බන්ධතාවය සඳහා රහස් තන්තුවකි.(Required)",
     "value": "mongodb+srv://vajira:vajira@cluster0.hzwqrqq.mongodb.net/?retryWrites=true&w=majority"	  
   },
   "MODE": {
-    "description": "Worktype of your bot. Use public or private, if it is private then only bot number can use it. If public then everyone can use it.",
+    "description": "ඔබේ බොට් එකේ වැඩ වර්ගය. Public හෝ Privert භාවිතා කරන්න, එය Privert නම්, එය භාවිතා කළ හැක්කේ බොට් අංකයට පමණි. Public නම්, සෑම කෙනෙකුටම එය භාවිතා කළ හැකිය.",
     "value": "public"
   },
   "AUTO_REACTION": {
-    "description": "Available option : cmd(react only cmds) | all (all emojis) | true (facial + hearts emojies)    ",
+    "description": "පවතින විකල්පය : cmd(react only cmds) | all (all emojis) | true (facial + hearts emojies)    ",
     "value": "false",
     "required": false 
   },
@@ -96,7 +96,7 @@
     "required": false 
   },
   "PACK_AUTHER": {
-    "description": "Put Sticker Author_Name/ බොට් අයිතිකාරයගෙ නම ඇතුලත් කරන්න.",
+    "description": "ස්ටිකර් කර්තෘ_නම දමන්න/ බොට් අයිතිකාරයගෙ නම ඇතුලත් කරන්න.",
     "value": "",
     "required": false 
   }
