@@ -293,6 +293,7 @@ smd({
     body = body.slice(body.indexOf("["));
     body = body.slice(0, body.indexOf("</script>")-1);
     body = body.slice(0, body.lastIndexOf(","));
+    textw +=Config.caption ;
     citel.reply(textw)
     const img = JSON.parse(body);
 
