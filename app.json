@@ -22,7 +22,7 @@
 	 "required" :false
   },
   "LEVEL_UP_MESSAGE": {
-    "description": "Fill the value true if you want bot send Level up message in chat.",
+    "description": "ඔබට කතාබස් තුළ bot Level up පණිවිඩයක් යැවීමට අවශ්‍ය නම් සත්‍ය අගය පුරවන්න.",
     "required" :false,
     "value": "false"
   }, 
@@ -32,32 +32,32 @@
     "value": "unavailable"
   },
   "AUTO_READ_STATUS": {
-    "description": "Fill the value true if you want bot view your Statuses.",
+    "description": "ඔබට බොට් ඔබගේ Status බැලීමට අවශ්‍ය නම් සත්‍ය අගය පුරවන්න.",
     "required" :false,
     "value": "false"
   }, 
   "MSGS_IN_LOG": {
-    "description": "Fill the value true if you want to see Messages in Console.",
+    "description": "ඔබට Console තුළ Messages බැලීමට අවශ්‍ය නම් සැබෑ අගය පුරවන්න.",
     "required" :false,
     "value": "false"
   },
   "READ_MESSAGE": {
-    "description": "Fill the value true if you want bot to read all messages.",
+    "description": "බොට් හට සියලුම පණිවිඩ කියවීමට අවශ්‍ය නම් සත්‍ය අගය පුරවන්න.",
     "required" :false,
     "value": "false"
   },
   "DISABLE_PM": {
-    "description": "Disable bot in pm, Take it false if you wanna run bot in your pm",
+    "description": "pm හි bot අක්‍රිය කරන්න, ඔබට ඔබගේ pm හි bot ධාවනය කිරීමට අවශ්‍ය නම් එය අසත්‍ය ලෙස ගන්න",
     "value": "",
     "required" :false
   },
   "ALWAYS_ONLINE": {
-    "description": "Take it 'true' if you wanna show Always Online",
+    "description": "ඔබට සැමවිටම සබැඳිව පෙන්වීමට අවශ්‍ය නම් එය 'true' ලෙස සලකන්න",
     "value": "false",
     "required" :false
   },
   "PREFIX": {
-    "description": "Enter your desired prefix for bot.",
+    "description": "බොට් සඳහා ඔබට අවශ්‍ය Prefix ඇතුළත් කරන්න.",
     "value": "."
   },
   "OWNER_NUMBER": {
