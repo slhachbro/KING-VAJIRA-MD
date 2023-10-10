@@ -281,6 +281,7 @@ let result = await download(text)
         \n🖥️ *Package name:* ${packagename}
         
         \n📊 *File size:* ${size}`,
+	{quoted: citel,});
     })
     return Suhail.bot.sendMessage(citel.chat, {
         document: {
