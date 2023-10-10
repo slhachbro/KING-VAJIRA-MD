@@ -310,7 +310,7 @@ for (let url of urlsArray) { Suhail.bot.sendMessage(citel.chat , {image : {url :
 
  
  
- /*
+ 
  
 let isImages = false;
             let num = text.split("|")[1];
