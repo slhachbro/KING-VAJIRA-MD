@@ -252,6 +252,7 @@ smd({
             pattern: "apk",
             desc: "Downloads apks  .",
             category: "downloader",
+	    react: "👨‍💻",
             filename: __filename,
             use: '<add sticker url.>',
         },
