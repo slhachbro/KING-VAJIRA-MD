@@ -90,7 +90,7 @@ const store = makeInMemoryStore({   logger: pino().child({ level: "silent", stre
   
   //------------------------------------------------------------------------------------
   
-  sᴜʜᴀɪʟ_ᴍᴅ.smd({pattern: "ping",desc: "To check ping",category: "general", filename: __filename,},
+  sᴜʜᴀɪʟ_ᴍᴅ.smd({pattern: "ping",desc: "To check ping",category: "general",react: "👨‍💻", filename: __filename,},
 async(Suhail, citel) => {
     var inital = new Date().getTime();
     const { key } = await citel.reply('*Testing Ping!!!*');
