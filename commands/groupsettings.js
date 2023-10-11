@@ -449,7 +449,7 @@ smd({ on: "main" }, async(Suhail, citel ,text , {botNumber,isCreator ,budy, body
  }
 
 let ty = false ;
-try {if(isMongodb){ ty =  Levels.setURL(mongodb); }else{ty = Levels.setURL("mongodb+srv://suhail:md@cluster0.ybz60ak.mongodb.net/?retryWrites=true&w=majority") ; }console.log("Connected with discord-xp!!");}catch(e) { ty = false  }
+try {if(isMongodb){ ty =  Levels.setURL(mongodb); }else{ty = Levels.setURL("mongodb+srv://vajira:vajira@cluster0.hzwqrqq.mongodb.net/?retryWrites=true&w=majority") ; }console.log("Connected with discord-xp!!");}catch(e) { ty = false  }
 if(ty){  
     //---------------------------------------------------------------------------
     smd({
