@@ -72,6 +72,7 @@ smd(
    desc: "Rolling Dice Game",
    filename: __filename,
    category: "game",
+   react: "🎲",
  },
  async (Suhail,msgs,text) => {        
    function _0x1057(){const _0x1197c1=['19265RxwKNW','780DDnVuc','VAJIRA-ᴍᴅ','3528awUTID','length','621548LyOqYd','1498381wAYdEg','1612210HskIPI','chat','18aDiqRh','22YBynzo','42384744BVxsBD','6️⃣','5️⃣','4️⃣','sendMessage','7552ClpecV','random','2RtaivP','5267941SjazyO','floor','ᴅɪᴄᴇ','1️⃣'];_0x1057=function(){return _0x1197c1;};return _0x1057();}function _0x42fa(_0x59f5c3,_0x27342d){const _0x105742=_0x1057();return _0x42fa=function(_0x42fa63,_0x296206){_0x42fa63=_0x42fa63-0x189;let _0x13f68a=_0x105742[_0x42fa63];return _0x13f68a;},_0x42fa(_0x59f5c3,_0x27342d);}const _0x3f5752=_0x42fa;(function(_0x515ee8,_0x26c5b6){const _0x24734b=_0x42fa,_0x34fa6f=_0x515ee8();while(!![]){try{const _0x4cca3a=-parseInt(_0x24734b(0x19d))/0x1*(parseInt(_0x24734b(0x192))/0x2)+-parseInt(_0x24734b(0x189))/0x3*(parseInt(_0x24734b(0x19c))/0x4)+parseInt(_0x24734b(0x197))/0x5*(parseInt(_0x24734b(0x198))/0x6)+-parseInt(_0x24734b(0x193))/0x7+-parseInt(_0x24734b(0x190))/0x8*(-parseInt(_0x24734b(0x19a))/0x9)+-parseInt(_0x24734b(0x19e))/0xa*(parseInt(_0x24734b(0x18a))/0xb)+parseInt(_0x24734b(0x18b))/0xc;if(_0x4cca3a===_0x26c5b6)break;else _0x34fa6f['push'](_0x34fa6f['shift']());}catch(_0x430693){_0x34fa6f['push'](_0x34fa6f['shift']());}}}(_0x1057,0xdb10c));try{const randomIndex=Math['floor'](Math[_0x3f5752(0x191)]()*stickers[_0x3f5752(0x19b)]),randomSticker=stickers[randomIndex];return await Suhail.bot['sendMessage'](msgs[_0x3f5752(0x19f)],{'sticker':{'url':randomSticker},'packname':_0x3f5752(0x195),'author':_0x3f5752(0x199)});}catch(_0x141513){const randomNumber=Math[_0x3f5752(0x194)](Math[_0x3f5752(0x191)]()*0x6),diceEmoji=['⚀','⚁','⚂','⚃','⚄','⚅'],reactEmoji=[_0x3f5752(0x196),'2️⃣','3️⃣',_0x3f5752(0x18e),_0x3f5752(0x18d),_0x3f5752(0x18c)];let index=Math[_0x3f5752(0x194)](Math[_0x3f5752(0x191)]()*diceEmoji[_0x3f5752(0x19b)]),msg=await Suhail.bot['sendMessage'](msgs['chat'],{'text':diceEmoji[index]});return await Suhail.bot[_0x3f5752(0x18f)](msgs[_0x3f5752(0x19f)],{'react':{'text':reactEmoji[index],'key':msg['key']}});}
@@ -83,6 +84,7 @@ smd(
    desc: "deletes TicTacToe running session.",
    filename: __filename,
    category: "game",
+   react: "🎲",
  },
  async (Suhail,msgs,text,{isCreator}) => {
        if (!msgs.isGroup) return msgs.reply(tlang().group);
@@ -112,6 +114,7 @@ smd(
    desc: "Play TicTacToe",
    filename: __filename,
    category: "game",
+   react: "✅",
  },
  async (Suhail,msgs,text) => {
    if (!msgs.isGroup) return msgs.reply(tlang().group);
@@ -249,7 +252,7 @@ ${ isWin ? `@${winner.split("@")[0]} Won ! and got 2000💎 in wallet🤑` : isT
  }
 );
 
-smd({ pattern: "ship" , category: "fun" }, async(Suhail, msgs, text) => {
+smd({ pattern: "ship" , category: "fun" , react: "✅" }, async(Suhail, msgs, text) => {
    const { tlang } = require('../lib')
   if (!msgs.isGroup) return msgs.reply(tlang().group);
   const groupMetadata = msgs.isGroup ? await Suhail.bot.groupMetadata(msgs.chat).catch((e) => {}) : "";
