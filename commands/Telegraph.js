@@ -54,7 +54,7 @@ smd({
     async(Suhail, msg,text) => {
  if (!text) { text=msg.quoted.text;}
         if(!text) return msg.send('Please reply to any text to get link.');
-        let data = await pastebin.createPaste(text, "Suhail Tech Info");
+        let data = await pastebin.createPaste(text, "Vajira Tech Info");
         return msg.send('_Here is your link._\n'+data+'\n*Click to Get Your Text*');
     }
 );
@@ -68,7 +68,7 @@ smd({
     async(Suhail, msg,text) => {
  let a = msg.quoted ? msg.quoted.text : msg.text;
    try{   
-let { data } = await axios.get(`https://api.telegra.ph/createPage?access_token=d3b25feccb89e508a9114afb82aa421fe2a9712b963b387cc5ad71e58722&title=Suhail-Md+Bot&author_name=SuhailTechInfo&content=[%7B"tag":"p","children":["${a.replace(/ /g,'+')}"]%7D]&return_content=true`);
+let { data } = await axios.get(`https://api.telegra.ph/createPage?access_token=d3b25feccb89e508a9114afb82aa421fe2a9712b963b387cc5ad71e58722&title=Vajira-Md+Bot&author_name=VajiraTechInfo&content=[%7B"tag":"p","children":["${a.replace(/ /g,'+')}"]%7D]&return_content=true`);
 return msg.reply(`*Paste created on telegraph*\nName:-${util.format(data.result.title)} \nUrl:- ${util.format(data.result.url)}`)
 
    }catch(e){return await msg.error(e)}
