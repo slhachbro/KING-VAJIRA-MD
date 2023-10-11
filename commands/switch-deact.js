@@ -50,6 +50,7 @@ smd({
  alias : ['deactive','deactivate'],
         desc: "Switches for varios works.",
         category: "group",
+        react: "⚙️",
         filename: __filename
     },
     async(Suhail, msg, text,{ isCreator }) => {
