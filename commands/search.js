@@ -272,6 +272,7 @@ smd({
             desc: "Searches Image on Google",
             use: '<text>',
             filename: __filename,
+            use: '<quote/reply message.>',
         },
         async(Suhail, citel, text) => {
 
