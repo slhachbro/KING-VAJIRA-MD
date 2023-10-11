@@ -68,6 +68,7 @@ smd({
  pattern: "bot",
  desc: "activates and deactivates bot.\nuse buttons to toggle.",
  category: "misc",
+ react: "👨‍💻",
  filename: __filename
 },
 async(Suhail, msg, text,{isCreator}) => {
@@ -150,6 +151,7 @@ else return msg.reply(`Antispam : kick Users Who Spamming in Groupn\n\nAntispam 
        pattern: "antilink",
        desc: "activates and deactivates antilink.\nuse buttons to toggle.",
        category: "group",
+       react: "👨‍💻",
        filename: __filename
    },
    async(Suhail, msg, text , {isCreator}) => {
@@ -163,6 +165,7 @@ smd({
     alias:["setwelcome"],
     desc: "sets welcome message in specific group.",
     category: "misc",
+    react: "👨‍💻",
  filename: __filename
  },
  async(Suhail, msg, text,{ isCreator }) => {
@@ -193,6 +196,7 @@ smd({
     alias: ["setgoodbye","setbye"],
     desc: "sets goodbye message in specific group.",
     category: "misc",
+    react: "👨‍💻",
  filename: __filename
  },
  async(Suhail, msg, text,{ isCreator }) => {
@@ -224,6 +228,7 @@ smd({
         alias:["antimessge"],
         desc: "Only Admins Allow to Send Message, Others kick.",
         category: "group",
+        react: "👨‍💻",
         filename: __filename
     },
     async(Suhail, msg, text , { cmdName ,isCreator}) => {
@@ -236,6 +241,7 @@ smd({
     pattern: "antibot",
     desc: "kick Bot Users from Group!",
     category: "group",
+    react: "👨‍💻",
     filename: __filename
 },
 async(Suhail, msg, text , { cmdName ,isCreator}) => {
@@ -247,6 +253,7 @@ smd({
     pattern: "disable",
     desc: "disable cmds in Group.!",
     category: "group",
+    react: "👨‍💻",
     filename: __filename
 },
 async(Suhail, msg, text , {isCreator}) => {
@@ -258,6 +265,7 @@ smd({
     pattern: "enable",
     desc: "enable a cmd in Group.!",
     category: "group",
+    react: "👨‍💻",
     filename: __filename
 },
 async(Suhail, msg, text , {isCreator}) => {
@@ -270,6 +278,7 @@ smd({
     pattern: "antifake",
     desc: "Allow to Join Group For Specific Country Code",
     category: "group",
+    react: "👨‍💻",
     filename: __filename,
 },
 async(Suhail, msg, text,{ isCreator }) => {
@@ -281,6 +290,7 @@ smd({
     pattern: "antidemote",
     desc: "Detects Promote and Automaticaly demote promoted person.", 
     category: "group",
+    react: "👨‍💻",
     filename: __filename,
 },
 async(Suhail, msg, text,{ isCreator }) => {
@@ -308,6 +318,7 @@ smd({
     pattern: "antipromote",
     desc: "Detects Promote and Automaticaly demote promoted person.", 
     category: "group",
+    react: "👨‍💻",
     filename: __filename,
 },
 async(Suhail, msg, text,{ isCreator }) => {
@@ -335,6 +346,7 @@ smd({
     pattern: "pdm",
     desc: "Detect Promote/Demote Users And Send Alerts in Chat ",
     category: "group",
+    react: "👨‍💻",
     filename: __filename,
 },
 async(Suhail, msg, text,{ isCreator }) => {
@@ -365,6 +377,7 @@ async(Suhail, msg, text,{ isCreator }) => {
         pattern: "warn",
         desc: "Warns user in Group.",
         category: "group",
+        react: "👨‍💻",
         filename: __filename,
         use: '<quote|reply|number>',
     },
@@ -382,6 +395,7 @@ smd({
     pattern: "resetwarn",
     desc: "Deletes all previously given warns to quoted user.",
     category: "group",
+    react: "👨‍💻",
    filename: __filename,
     use: '<quote|reply|number>',
 },
@@ -396,6 +410,7 @@ smd({
     pattern: "checkwarn",
     desc: "Check warns",
     category: "group",
+    react: "👨‍💻",
     filename: __filename,
     use: '<quoted/reply user.>',
 },
@@ -427,6 +442,7 @@ smd({
             alias : ["chatbot"],
             desc: "activates and deactivates chatbot.\nuse buttons to toggle.",
             category: "misc",
+            react: "👨‍💻",
             filename: __filename
         },
         async(Suhail, msg, text,{ isCreator }) => {
@@ -456,6 +472,7 @@ if(ty){
         pattern: "profile",
         desc: "Shows profile of user.",
         category: "group",
+        react: "👨‍💻",
         filename: __filename,
     },
     async(Suhail, msg, text) => {
@@ -517,6 +534,7 @@ smd({
         pattern: "rank",
         desc: "Sends rank card of user.",
         category: "group",
+        react: "👨‍💻",
         filename: __filename,
     },
     async(Suhail, msg, text) => {
@@ -590,6 +608,7 @@ smd({
         alias: ["deck"],
         desc: "To check leaderboard",
         category: "general",
+        react: "👨‍💻",
         filename: __filename,
     },
     async(Suhail, msg) => {
