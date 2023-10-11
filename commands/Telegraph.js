@@ -49,6 +49,7 @@ smd({
         pattern: "pastebin",
         desc: "To check ping",
         category: "converter",
+        react: "✅",
         filename: __filename,
     },
     async(Suhail, msg,text) => {
@@ -63,6 +64,7 @@ smd({
         pattern: "paste",
         desc: "create paste of text.",
         category: "converter",
+        react: "✅",
         filename: __filename,
     },
     async(Suhail, msg,text) => {
