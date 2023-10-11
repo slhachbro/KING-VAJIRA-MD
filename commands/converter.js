@@ -37,7 +37,7 @@ const fetch = require('node-fetch');
 
 
 //---------------------------------------------------------------------------
-smd({pattern: "sticker",alias: ["s"], desc: "Makes sticker of replied image/video.",category: "sticker", filename: __filename, use: '<reply to any image/video.>' },
+smd({pattern: "sticker",alias: ["s"], desc: "Makes sticker of replied image/video.",category: "sticker",react: "✅", filename: __filename, use: '<reply to any image/video.>' },
          async(Suhail, msg,) => {
           let mime = msg.mtype;
           let media ;
@@ -54,7 +54,7 @@ smd({pattern: "sticker",alias: ["s"], desc: "Makes sticker of replied image/vide
   //---------------------------------------------------------------------------
 
      //---------------------------------------------------------------------------
- smd({pattern: "take", desc: "Makes sticker of replied image/video.", category: "sticker", filename: __filename},
+ smd({pattern: "take", desc: "Makes sticker of replied image/video.", category: "sticker",react: "✅", filename: __filename},
          async(Suhail, msg, text) => {
              if (!msg.quoted) return msg.reply("*Uhh Dear, Reply to sticker*");
              let mime = msg.quoted.mtype
@@ -68,7 +68,7 @@ smd({pattern: "sticker",alias: ["s"], desc: "Makes sticker of replied image/vide
            return await generateSticker(Suhail, msg, 'take', media, options ) , media = false;
 });
   //---------------------------------------------------------------------------
- smd({pattern: "attp",desc: "Makes sticker of given text.",category: "sticker",filename: __filename,use: '<text>'},
+ smd({pattern: "attp",desc: "Makes sticker of given text.",category: "sticker",react: "✅",filename: __filename,use: '<text>'},
   async(Suhail, msg, text , {smdName}) => {
  if(!text) return msg.reply("*Please provide text to generate sticker*")
 let media  = await getBuffer(`https://raganork-api.onrender.com/api/attp?text=${text}&apikey=with_love_souravkl11`);
@@ -76,7 +76,7 @@ return await generateSticker(Suhail, msg, smdName, media, );
   })
      //---------------------------------------------------------------------------
 
- smd({pattern: "crop",alias: ["cropsticker"], desc: "Makes sticker of replied image.", category: "sticker",filename: __filename,use: '<reply image>'},
+ smd({pattern: "crop",alias: ["cropsticker"], desc: "Makes sticker of replied image.", category: "sticker",react: "✅",filename: __filename,use: '<reply image>'},
          async(Suhail, msg,) => {
              if (!msg.quoted) return msg.reply("*Uhh Dear, Reply to an image*");
              let mime = msg.quoted.mtype;
@@ -89,7 +89,7 @@ return await generateSticker(Suhail, msg, smdName, media, );
          }
      )
     //---------------------------------------------------------------------------
- smd({ pattern: "circle", alias: ["circlestic","circlesticker","cs"], desc: "circle sticker of image.",category: "sticker",filename: __filename, use: '<repl image.>'},
+ smd({ pattern: "circle", alias: ["circlestic","circlesticker","cs"], desc: "circle sticker of image.",category: "sticker",react: "✅",filename: __filename, use: '<repl image.>'},
          async(Suhail, msg,) => {
              if (!msg.quoted) return msg.reply("*Uhh dear, Reply to an image*");
              let mime = msg.quoted.mtype
@@ -100,7 +100,7 @@ return await generateSticker(Suhail, msg, smdName, media, );
             }else return msg.reply("*Uhh please, Reply to an image*");
          })
  //---------------------------------------------------------------------------
-smd({pattern: "round", alias: ["roundstic","roundsticker"], desc: "Makes sticker of replied image/video.",category: "sticker", filename: __filename,use: '<reply to any image/video.>' },
+smd({pattern: "round", alias: ["roundstic","roundsticker"], desc: "Makes sticker of replied image/video.",category: "sticker",react: "✅", filename: __filename,use: '<reply to any image/video.>' },
          async(Suhail, msg,) => {
             if (!msg.quoted) return msg.reply("*Uhh dear, Reply to an image*");
             let mime = msg.quoted.mtype
@@ -125,6 +125,7 @@ smd({
         pattern: "wallpaper",
         desc: "To get Random Pics",
        category: "Anime Pics",
+       react: "✅",
         filename: __filename
     },
 
