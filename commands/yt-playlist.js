@@ -10,6 +10,7 @@ cmd({
             pattern: "playlist",
             desc: "Downloads video from playlist.",
             category: "downloader",
+	    react: "🎶",
             filename: __filename,
             use: '<yt playlist url>',
         },
