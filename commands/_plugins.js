@@ -44,12 +44,12 @@ const fs = require('fs-extra')
 const { exec } = require("child_process"); 
 const {plugins, isUrl, pluginsdb,smd , tlang  , Config } = require('../lib')
 //---------------------------------------------------------------------------
-smd({pattern: "plugins",alias :['plugin'],category: "owner",desc: "Shows list of all externally installed modules", filename: __filename },async(Aviator, msg, text, { isCreator }) => {
+smd({pattern: "plugins",alias :['plugin'],category: "owner",react: "👨‍💻",desc: "Shows list of all externally installed modules", filename: __filename },async(Aviator, msg, text, { isCreator }) => {
   if (!isCreator) return msg.send(tlang().owner);
   let res = await plugins('plugins' ,text);
   return await msg.send(!res?`*_There's no plugin install in ${Config.botname}_*`: !text?`*All Installed Modules are:-*\n\n${res}`:res  )})
 //---------------------------------------------------------------------------
-smd({ pattern: "remove",alias :['uninstall'],category: "owner", desc: "removes external modules.", filename: __filename },
+smd({ pattern: "remove",alias :['uninstall'],category: "owner",react: "✅", desc: "removes external modules.", filename: __filename },
     async(Aviator, msg, text,{ isCreator}) => { 
       if (!isCreator) return msg.reply(tlang().owner);
       if(!text) return await msg.reply("*_Uhh Please, Provide Me Plugin Name_*");
@@ -65,7 +65,7 @@ smd({ pattern: "remove",alias :['uninstall'],category: "owner", desc: "removes e
       }catch{}
     })
 //---------------------------------------------------------------------------
-smd({ pattern: "install",category: "owner", desc: "Installs external modules..",filename: __filename},
+smd({ pattern: "install",category: "owner",react: "✅", desc: "Installs external modules..",filename: __filename},
     async(Aviator, msg, text, {isCreator}) => {
       if (!isCreator) return msg.reply(tlang().owner);
       let url = text ? text : msg.quoted ?  msg.quoted.text : '';
