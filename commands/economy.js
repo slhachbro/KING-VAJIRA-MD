@@ -52,7 +52,7 @@ const sck = groupdb ;
 if(ty){let activegc = ''; 
 /*
  smd({pattern: "economy",desc: "daily gold.",category: "economy", }, */ 
-smd({ pattern: "daily", desc: "daily gold.", category: "economy",filename: __filename, /* react: "💷" */ },
+smd({ pattern: "daily", desc: "daily gold.", category: "economy",filename: __filename,react: "💷" */ },
     async(Aviator, msg, text,{ isCreator }) => {
        let zerogroup = await sck.findOne({  id: msg.chat,   }) || {}
        let mongoschemas = zerogroup.economy || "false";
@@ -73,7 +73,7 @@ smd({
         desc: "reset wallet of quoted user.",
         category: "economy",
         filename: __filename,
-       // react: "💷"
+        react: "💷"
     },
     async(Aviator, msg, text,{ isCreator }) => {
        let zerogroup = (await sck.findOne({ id: msg.chat,})) || await sck.new({id: msg.chat,})
@@ -93,7 +93,7 @@ smd({
    desc: "update capacity.",
    category: "economy",
    filename: __filename,
-  // react: "💷"
+   react: "💷"
 },
 async(Aviator, msg, text,{ isCreator }) => {
    let zerogroup = (await sck.findOne({ id: msg.chat, })) || await sck.new({  id: msg.chat,  })
@@ -149,7 +149,7 @@ await msg.reply('*What are you trying to do📉*.')
        desc: "deposit gold.",
        category: "economy",
        filename: __filename,
-     //  react: "💷"
+       react: "💷"
    },
    async(Aviator, msg, text,{ isCreator }) => {
        let zerogroup = (await sck.findOne({ id: msg.chat,  })) || {};
@@ -170,7 +170,7 @@ await msg.reply('*What are you trying to do📉*.')
        desc: "check leaderboard.",
        category: "economy",
        filename: __filename,
-      // react: "💷"
+       react: "💷"
    },
    async(Aviator, msg, text,{ isCreator }) => {
    let h = await eco.lb("Suhail",10);
@@ -197,7 +197,7 @@ smd({
    desc: "transfer gold.",
    category: "economy",
    filename: __filename,
-  // react: "💷"
+   react: "💷"
 },
 async(Aviator, msg, text,{ isCreator }) => {
    let zerogroup =await sck.findOne({  id: msg.chat, }) || {} ;
@@ -233,7 +233,7 @@ async(Aviator, msg, text,{ isCreator }) => {
        desc: "shows wallet.",
        category: "economy",
        filename: __filename,
-      // react: "💷"
+       react: "💷"
    },
    async(Aviator, msg, text,{ isCreator }) => {
        let zerogroup = (await sck.findOne({
@@ -254,7 +254,7 @@ async(Aviator, msg, text,{ isCreator }) => {
        desc: "Add money in wallet.",
        category: "economy",
        filename: __filename,
-    //   react: "💷"
+       react: "💷"
    },
    async(Aviator, msg, text,{ isCreator }) => {
        if(!isCreator) return
@@ -272,7 +272,7 @@ async(Aviator, msg, text,{ isCreator }) => {
        desc: "shows bank amount.",
        category: "economy",
        filename: __filename,
-       //react: "💷"
+       react: "💷"
    },
    async(Aviator, msg, text,{ isCreator }) => {
        let zerogroup = (await sck.findOne({  id: msg.chat,  })) || (await sck.new({   id: msg.chat,   }) );
@@ -290,6 +290,7 @@ async(Aviator, msg, text,{ isCreator }) => {
        pattern: "rob",
        desc: "rob bank amount.",
        category: "economy",
+       react: "💷",
        filename: __filename,
    },
    async(Aviator, msg, text,{ isCreator }) => {
@@ -343,7 +344,7 @@ await msg.reply('*What are you trying to do👀*.')
        desc: "withdraw money from bank account.",
        category: "economy",
        filename: __filename,
-      // react: "💷"
+       react: "💷"
    },
    async(Aviator, msg, text,{ isCreator }) => {
        let zerogroup = (await sck.findOne({   id: msg.chat,  })) || {} ;
@@ -365,7 +366,7 @@ await msg.reply('*What are you trying to do👀*.')
        desc: "gamble money.",
        category: "economy",
        filename: __filename,
-      // react: "💷"
+       react: "💷"
    }, 
    async(Aviator, msg, text,{ isCreator }) => {
        let zerogroup = (await sck.findOne({ id: msg.chat,})) || {};
@@ -426,7 +427,7 @@ await msg.reply('*What are you trying to do👀*.')
        desc: "withdraw money from bank account.",
        category: "economy",
        filename: __filename,
-      // react: "💷"
+       react: "💷"
    },
    async(Aviator, msg, text,{ isCreator }) => {
        let zerogroup = (await sck.findOne({  id: msg.chat,    })) || {};
@@ -531,7 +532,7 @@ smd({
    desc: "slot game.",
    category: "economy",
    filename: __filename,
- //  react: "💷"
+   react: "💷"
 },
 async(Aviator, msg, text,{ isCreator }) => {
    let zerogroup = (await sck.findOne({ id: msg.chat, })) || {};
