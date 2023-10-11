@@ -52,6 +52,7 @@ const fetch = require('node-fetch')
    smd({
            pattern: "find",
            category: "misc",
+           react: "🔄",
            desc: "Finds info about song",
            filename: __filename,
        },
@@ -96,6 +97,7 @@ smd({
             pattern: 'ss',
             alias :['webss' , 'fullss'],
             category: "search",
+            react: "🔄",
             desc: "Searches Image on Google",
             use: '<text>',
             filename: __filename,
@@ -125,6 +127,7 @@ catch (err) { return send(citel,"```Error While Fetching Snapshot```")}
 smd({
             pattern: "imdb",
             category: "search",
+            react: "🔄",
             desc: "Sends image of asked Movie/Series.",
             use: '<text>',
             filename: __filename,
@@ -161,6 +164,7 @@ smd({
 smd({
             pattern: "weather",
             category: "search",
+            react: "🔄",
             desc: "Sends weather info about asked place.",
             use: '<location>',
             filename: __filename,
@@ -192,6 +196,7 @@ smd({
 smd({
             pattern: "horo",
             category: "search",
+            react: "🔄",
             desc: "Gives horoscope info of user.",
             use: '<sign>\n:Example: horo libra',
             filename: __filename,
@@ -230,6 +235,7 @@ smd({
             pattern: "cric",
             alias :['search','gsearch'],
             category: "search",
+            react: "🔄",
             desc: "Sends info of given query from Google Search.",
             use: '<text>',
             filename: __filename,
@@ -262,6 +268,7 @@ smd({
             pattern: "image",
             alias: ["img" , "pic"],
             category: "search",
+            react: "🔄",
             desc: "Searches Image on Google",
             use: '<text>',
             filename: __filename,
@@ -351,8 +358,9 @@ smd({
         pattern: "iswa",
         alias: ["oldwa","bio","onwa"],
         category: "search",
+         react: "🔄",
         desc: "Searches in given rage about given number.",
-        use: '9112345678xx',
+        use: '947669436xx',
         filename: __filename,
     },
     async(Suhail, citel, text) => {
@@ -404,8 +412,9 @@ smd({
 smd({
         pattern: "nowa",
         category: "search",
+        react: "🔄",
         desc: "Searches in given rage about given number.",
-        use: '9112345678xx',
+        use: '947669436xx',
         filename: __filename,
     },
     async(Suhail, citel, text) => {
