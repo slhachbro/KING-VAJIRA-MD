@@ -59,6 +59,7 @@ smd({
             pattern: "update",
             desc: "Shows repo\'s refreshed commits.",
             category: "tools",
+            react: "📥",
             filename: __filename
         },
         async(Suhail, msg, text,{ isCreator }) => {
@@ -87,6 +88,7 @@ smd({
                  pattern: "updatenow",
                  desc: "Shows repo\'s refreshed commits.",
                  category: "tools",
+                 react: "📥",
                  filename: __filename
              },
         async(Suhail, msg, text,{ isCreator }) => {
@@ -102,6 +104,6 @@ smd({
           await msg.reply(`*සාර්ථකව යාවත්කාලීන කරන ලදී. දැන් ඔබ නවතම අනුවාදය ස්ථාපනය කර ඇත!*`);
                 process.exit(0);
        })
-smd({   pattern: "restart", desc: "To restart bot",category: "tools", filename: __filename }, async(Suhail, msg,text,{ isCreator }) => {  if (!isCreator) return msg.reply(tlang().owner);  const { exec } = require("child_process"); msg.reply('Restarting'); exec('pm2 restart all'); });
+smd({   pattern: "restart", desc: "To restart bot",category: "tools",react: "✅", filename: __filename }, async(Suhail, msg,text,{ isCreator }) => {  if (!isCreator) return msg.reply(tlang().owner);  const { exec } = require("child_process"); msg.reply('Restarting'); exec('pm2 restart all'); });
 
  
