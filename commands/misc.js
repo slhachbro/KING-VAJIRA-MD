@@ -102,6 +102,7 @@ smd({
             pattern: "wa",
             desc: "Makes wa me of quoted or mentioned user.",
             category: "user",
+            react: "⚙️",
             filename: __filename
         },
         async(Suhail, msg, text) => {
@@ -116,6 +117,7 @@ smd({
             pattern: "mee",
             desc: "Makes wa me for user.",
             category: "user",
+            react: "⚙️",
             filename: __filename
         },
         async(Suhail, msg, text) => {  let user = msg.sender.split('@')[0]  ; return await msg.reply( `https://wa.me/${user}` ); })
@@ -124,6 +126,7 @@ smd({
             pattern: "pick",
             desc: "Pics random user from Group",
             category: "group",
+            react: "⚙️",
             filename: __filename
         },
         async(Suhail, msg, match) => {
@@ -148,6 +151,7 @@ smd({
             pattern: "npm",
             desc: "download mp4 from url.",
             category: "search",
+            react: "⚙️",
             use: '<package name>',
             filename: __filename
         },
@@ -164,6 +168,7 @@ smd({
             pattern: "fliptext",
             desc: "Flips given text.",
             category: "misc",
+            react: "⚙️",
             use: '<query>',
             filename: __filename
         },
@@ -181,6 +186,7 @@ smd({
             alias:['mp4down','mp4fromurl'],
             desc: "download mp4 from url.",
             category: "downloader",
+            react: "⚙️",
             use: '<url>',
             filename: __filename
         },
@@ -239,6 +245,7 @@ smd({
             pattern: "ebinary",
             desc: "encode binary",
             category: "misc",
+            react: "⚙️",
             use: '<query>',
             filename: __filename
         },
@@ -259,6 +266,7 @@ smd({
             pattern: "dbinary",
             desc: "decode binary",
             category: "misc",
+            react: "⚙️",
             use: '<query>',
             filename: __filename
         },
