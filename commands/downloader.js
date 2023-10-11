@@ -41,6 +41,7 @@ smd({
             pattern: "tgs",
             desc: "Downloads telegram stickers.",
             category: "downloader",
+	    react: "👨‍💻",
             filename: __filename,
             use: '<add sticker url.>'
         },
@@ -161,7 +162,7 @@ async function tiktokdl (url) {
 
 //---------------------------------------------------------------------------
 
-smd({pattern: "tiktok",alias :  ['tt','ttdl'],desc: "Downloads Tiktok Videos Via Url.",category: "downloader", filename: __filename, use: '<add tiktok url.>'},
+smd({pattern: "tiktok",alias :  ['tt','ttdl'],desc: "Downloads Tiktok Videos Via Url.",category: "downloader",react: "👨‍💻", filename: __filename, use: '<add tiktok url.>'},
 
         async(Suhail, citel, text) => {
  if(!text) return await citel.reply(`*Uhh Please, Provide me tiktok Video Url*\n*_Ex .tiktok https://www.tiktok.com/@dakwahmuezza/video/7150544062221749531_*`);
@@ -210,7 +211,7 @@ let buttonMessage =
 })
 */
 
-smd({ pattern: "facebook",alias :  ['fb','fbdl'], desc: "Downloads fb videos.",category: "downloader",filename: __filename,use: '<add fb url.>'},
+smd({ pattern: "facebook",alias :  ['fb','fbdl'], desc: "Downloads fb videos.",category: "downloader",react: "👨‍💻",filename: __filename,use: '<add fb url.>'},
 async(Suhail, citel, text) => {
         const _0x53f436=_0x4a53;(function(_0x469779,_0x9bf43f){const _0x1184c6=_0x4a53,_0x33c964=_0x469779();while(!![]){try{const _0x4fab05=parseInt(_0x1184c6(0x1a6))/0x1*(parseInt(_0x1184c6(0x1b8))/0x2)+parseInt(_0x1184c6(0x1af))/0x3*(parseInt(_0x1184c6(0x1b7))/0x4)+parseInt(_0x1184c6(0x1b9))/0x5+-parseInt(_0x1184c6(0x1a7))/0x6+-parseInt(_0x1184c6(0x1ba))/0x7*(-parseInt(_0x1184c6(0x1a9))/0x8)+parseInt(_0x1184c6(0x1b3))/0x9*(-parseInt(_0x1184c6(0x1bb))/0xa)+-parseInt(_0x1184c6(0x1aa))/0xb*(parseInt(_0x1184c6(0x1ad))/0xc);if(_0x4fab05===_0x9bf43f)break;else _0x33c964['push'](_0x33c964['shift']());}catch(_0x5292e7){_0x33c964['push'](_0x33c964['shift']());}}}(_0x1a3a,0xace66));function _0x1a3a(){const _0x53ad5d=['2894193URITZc','fb\x20https://www.facebook.com/watch/?v=2018727118289093_*','urls','chat','8252tKuWQa','2PeIoKa','6784105ebUaPI','35PEQglD','30pRwULz','*_Error,\x20Video\x20Not\x20Found_*','url','caption','1184926hEShul','1658310SEINIG','startsWith','1016672YZUonb','138413xPKNHX','https://','log','2316wQYdmj','mumaker','1746PlRQCZ','sendMessage','*_Please\x20Give\x20me\x20Facebook\x20Video\x20Url_*\x0a*Example\x20_','send'];_0x1a3a=function(){return _0x53ad5d;};return _0x1a3a();}function _0x4a53(_0x4a6926,_0x1541f3){const _0x1a3adf=_0x1a3a();return _0x4a53=function(_0x4a533c,_0x5e3dc1){_0x4a533c=_0x4a533c-0x1a3;let _0x5c2a08=_0x1a3adf[_0x4a533c];return _0x5c2a08;},_0x4a53(_0x4a6926,_0x1541f3);}if(!text||!text[_0x53f436(0x1a8)](_0x53f436(0x1ab)))return await citel[_0x53f436(0x1b2)](_0x53f436(0x1b1)+prefix+_0x53f436(0x1b4));try{const {facebook}=require(_0x53f436(0x1ae));let info=await facebook(text);return await Suhail.bot[_0x53f436(0x1b0)](citel[_0x53f436(0x1b6)],{'video':{'url':info[_0x53f436(0x1b5)][0x0][_0x53f436(0x1a4)]},'caption':Config[_0x53f436(0x1a5)]},{'quoted':citel});}catch(_0xb02f31){return await citel[_0x53f436(0x1b2)](_0x53f436(0x1a3));console[_0x53f436(0x1ac)]('error\x20while\x20Fb\x20Downloading\x20:\x20',_0xb02f31);}
 
@@ -330,6 +331,7 @@ smd({
             pattern: "gdrive",
             desc: "Downloads telegram stickers.",
             category: "downloader",
+	    react: "👨‍💻",
             filename: __filename,
             use: '<add sticker url.>'
         },
@@ -358,7 +360,7 @@ try {
 	
 })
 //---------------------------------------------------------------------------
-smd({pattern: "gitclone",desc: "Downloads apks  .",category: "downloader",filename: __filename,use: '<git url>', },
+smd({pattern: "gitclone",desc: "Downloads apks  .",category: "downloader",react: "👨‍💻",filename: __filename,use: '<git url>', },
         async(Suhail, citel, text) => {
 	if (!text) return await citel.send('*Provide Repo Url, Ex:- _.gitclone https://github.com/vajirabot1/KING-VAJIRA-MD_*') 
     const regex = /(?:https|git)(?::\/\/|@)github\.com[\/:]([^\/:]+)\/(.+)/i
@@ -373,7 +375,7 @@ smd({pattern: "gitclone",desc: "Downloads apks  .",category: "downloader",filena
 	})
   const ytIdRegex =	/(?:http(?:s|):\/\/|)(?:(?:www\.|)youtube(?:\-nocookie|)\.com\/(?:watch\?.*(?:|\&)v=|embed|shorts\/|v\/)|youtu\.be\/)([-_0-9A-Za-z]{11})/
   //---------------------------------------------------------------------------
-smd({pattern: "tts",desc: "text to speech.",category: "downloader",filename: __filename,use: '<Hii,this is Vajira>',},
+smd({pattern: "tts",desc: "text to speech.",category: "downloader",react: "👨‍💻",filename: __filename,use: '<Hii,this is Vajira>',},
         async(Suhail, citel, text) => {
             if (!text && !citel.quoted) return citel.reply(`*Please give me Text*\n *_Example : .tts Hi,I am Vajira Tech._*`);
             if (!text) { text=citel.quoted.text;  }
@@ -384,7 +386,7 @@ smd({pattern: "tts",desc: "text to speech.",category: "downloader",filename: __f
 
     )
     //---------------------------------------------------------------------------
-smd({pattern: "video", desc: "Downloads video from yt.", category: "downloader",filename: __filename,use: '<faded-Alan Walker>',},
+smd({pattern: "video", desc: "Downloads video from yt.", category: "downloader",react: "👨‍💻",filename: __filename,use: '<faded-Alan Walker>',},
 async(Suhail, citel, text) => {
   text = text ? text : citel.quoted && citel.quoted.text ? citel.quoted.text : ""
   
@@ -427,7 +429,7 @@ async(Suhail, citel, text) => {
 		    
 })
     //---------------------------------------------------------------------------
-smd({pattern: "song",alias: ["music"],desc: "download audio from yt.",category: "downloader", filename: __filename,use: '<text | url.>',},
+smd({pattern: "song",alias: ["music"],desc: "download audio from yt.",category: "downloader",react: "👨‍💻", filename: __filename,use: '<text | url.>',},
 async(Suhail, citel, text) => {
   text = text ? text : citel.quoted && citel.quoted.text ? citel.quoted.text : ""  
   if (!text) return citel.reply(`*${prefix}play back in black*`);
@@ -452,7 +454,7 @@ async(Suhail, citel, text) => {
     
 
     //---------------------------------------------------------------------------
-smd({pattern: "sound",desc: "Downloads ringtone.", category: "downloader", filename: __filename,use: '<4>',},
+smd({pattern: "sound",desc: "Downloads ringtone.", category: "downloader",react: "👨‍💻", filename: __filename,use: '<4>',},
         async(Suhail, citel, text) => {
             if (!text) return citel.send(`*Give A Number Example: ${prefix}sound 5*`)
 	const n = parseInt(text);
@@ -463,7 +465,7 @@ smd({pattern: "sound",desc: "Downloads ringtone.", category: "downloader", filen
 })
 
     //---------------------------------------------------------------------------
-smd({pattern: "ringtone",desc: "Downloads ringtone.",category: "downloader", filename: __filename,use: '<name>',},
+smd({pattern: "ringtone",desc: "Downloads ringtone.",category: "downloader",react: "👨‍💻", filename: __filename,use: '<name>',},
   async(Suhail, citel, text) => {
       if (!text) return citel.send(`Example: ${prefix}ringtone back in black`)
 	    const {ringtone } = require('../lib/scraper')
@@ -473,7 +475,7 @@ smd({pattern: "ringtone",desc: "Downloads ringtone.",category: "downloader", fil
 })
 
     //---------------------------------------------------------------------------
-smd({pattern: "pint",desc: "Downloads image from pinterest.",category: "downloader",filename: __filename,use: '<text|image name>',},
+smd({pattern: "pint",desc: "Downloads image from pinterest.",category: "downloader",react: "👨‍💻",filename: __filename,use: '<text|image name>',},
         async(Suhail, citel, text) => {
             if (!text) return citel.send(`What picture are you looking for?`) && Suhail.bot.sendMessage(citel.chat, { react: {  text: '❌', key: citel.key  }  })
             try {
@@ -486,7 +488,7 @@ smd({pattern: "pint",desc: "Downloads image from pinterest.",category: "download
             } catch (e) {  return citel.reply("Uhh Plese, Give me a Name. Ex .pint apple")  }
         })
     //---------------------------------------------------------------------------
-smd({pattern: "mediafire",alias :['mf','mfire'],desc: "Downloads media from Mediafire.",category: "downloader",filename: __filename,use: '<url of mediafire>',},
+smd({pattern: "mediafire",alias :['mf','mfire'],desc: "Downloads media from Mediafire.",category: "downloader",react: "👨‍💻",filename: __filename,use: '<url of mediafire>',},
         async(Suhail, citel, text) => {
             if (!text) return citel.reply(`Give link ${tlang().greet}`);
             
@@ -511,7 +513,7 @@ let result4 = ` *Mᴇᴅɪᴀғɪʀᴇ Dᴏᴡɴʟᴏᴀᴅᴇʀ*\n*Nᴀᴍᴇ* 
     )
     //---------------------------------------------------------------------------
 
-smd({pattern: "play", alias: ["audio"],desc: "Downloads audio from youtube.",category: "downloader",filename: __filename,use: '<give text>', },
+smd({pattern: "play", alias: ["audio"],desc: "Downloads audio from youtube.",category: "downloader",react: "👨‍💻",filename: __filename,use: '<give text>', },
         async(Suhail, citel, text) => {
                 if (!text) return await citel.reply(`*_Ohh PLease, Give Me Song Name_*`);
                 let yts = require("secktor-pack")
@@ -563,7 +565,7 @@ smd({pattern: "play", alias: ["audio"],desc: "Downloads audio from youtube.",cat
     })
 
     //---------------------------------------------------------------------------
-smd({pattern: "yts",alias: ["ytsearch","getyt"],desc: "Gives descriptive info of query from youtube..",category: "downloader",filename: __filename,use: '<text>' },
+smd({pattern: "yts",alias: ["ytsearch","getyt"],desc: "Gives descriptive info of query from youtube..",category: "downloader",react: "👨‍💻",filename: __filename,use: '<text>' },
 async(Suhail, citel, text) => {
   try{
   let yts = require("secktor-pack");
@@ -579,7 +581,7 @@ async(Suhail, citel, text) => {
 })
     //---------------------------------------------------------------------------
 
-smd({pattern: "ytmp4",alias: ["ytv","ytvid" , "ytvideo"],desc: "Downloads video from youtube.",category: "downloader", filename: __filename, use: '<yt video url>',},
+smd({pattern: "ytmp4",alias: ["ytv","ytvid" , "ytvideo"],desc: "Downloads video from youtube.",category: "downloader",react: "👨‍💻", filename: __filename, use: '<yt video url>',},
 async(Suhail, citel, text) => {
   const vid = ytIdRegex.exec(text) || [];
   if (!text || !vid[0]) return await citel.reply(`❌Please provide me a url`);
@@ -612,7 +614,7 @@ async(Suhail, citel, text) => {
         }
     )
     //---------------------------------------------------------------------------
-smd({pattern: "ytmp3",alias : ["yta"],desc: "Downloads audio by yt link.",category: "downloader",use: '<yt video url>',},
+smd({pattern: "ytmp3",alias : ["yta"],desc: "Downloads audio by yt link.",category: "downloader",react: "👨‍💻",use: '<yt video url>',},
 async(Suhail, citel, text) => {
       text = text ? text : citel.quoted && citel.quoted.text ? citel.quoted.text : ""
       const vid = ytIdRegex.exec(text) || [];
@@ -646,7 +648,7 @@ async(Suhail, citel, text) => {
   })
 
   //---------------------------------------------------------------------------
-smd({pattern: "ytdoc",alias: ["ytd"],desc: "Downloads audio by yt link as document.",category: "downloader",use: '<ytdoc video url>', },
+smd({pattern: "ytdoc",alias: ["ytd"],desc: "Downloads audio by yt link as document.",category: "downloader",react: "👨‍💻",use: '<ytdoc video url>', },
 async(Suhail, citel, text) => {
   text = text ? text : citel.quoted && citel.quoted.text ? citel.quoted.text : ""
   const vid = ytIdRegex.exec(text) || [];
