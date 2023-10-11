@@ -47,6 +47,7 @@ if(isMongodb){ let groupid = ''
         pattern: "amute",
         desc: "sets auto mute time in group.",
         category: "moderation",
+        react: "👨‍💻",
     },
     async(Suhail, msg, text,{ isCreator }) => {
         if (!isCreator) return msg.reply(tlang().owner)
@@ -70,6 +71,7 @@ if(isMongodb){ let groupid = ''
        pattern: "aunmute",
        desc: "sets unmute time in group.",
        category: "moderation",
+       react: "👨‍💻",
    },
    async(Suhail, msg, text,{ isCreator }) => {
        if (!isCreator) return msg.reply(tlang().owner)
@@ -93,6 +95,7 @@ if(isMongodb){ let groupid = ''
        pattern: "dunmute",
        desc: "Delete unmute from group.",
        category: "moderation",
+       react: "👨‍💻",
    },
    async(Suhail, msg, text,{ isCreator }) => {
        if (!isCreator) return msg.reply(tlang().owner)
@@ -112,6 +115,7 @@ if(isMongodb){ let groupid = ''
        pattern: "dmute",
        desc: "Delete mute from group.",
        category: "moderation",
+       react: "👨‍💻",
    },
    async(Suhail, msg, text,{ isCreator }) => {
        if (!isCreator) return msg.reply(tlang().owner)
