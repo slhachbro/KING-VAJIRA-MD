@@ -49,18 +49,18 @@ const fetch = require('node-fetch');
 //---------------------------------------------------------------------------
 
 //---------------------------------------------------------------------------
-smd({pattern: "question", desc: "Random Question.", category: "fun",filename: __filename, },async(Void, citel, text , {cmdName}) => { return await citel.reply(await randomeFunfacts(cmdName)); });
+smd({pattern: "question", desc: "Random Question.", category: "fun",react: "🎲",filename: __filename, },async(Void, citel, text , {cmdName}) => { return await citel.reply(await randomeFunfacts(cmdName)); });
 //---------------------------------------------------------------------------
-smd({pattern: "truth",desc: "truth and dare(truth game.).",category: "fun",filename: __filename, },async(Void, citel, text , {cmdName}) => { return await citel.reply(await randomeFunfacts(cmdName)); });
+smd({pattern: "truth",desc: "truth and dare(truth game.).",category: "fun",react: "🎲",filename: __filename, },async(Void, citel, text , {cmdName}) => { return await citel.reply(await randomeFunfacts(cmdName)); });
 //---------------------------------------------------------------------------
-smd({pattern: "dare",desc: "truth and dare(dare game.).",category: "fun",filename: __filename, },async(Void, citel, text , {cmdName}) => { return await citel.reply(await randomeFunfacts(cmdName)); });
+smd({pattern: "dare",desc: "truth and dare(dare game.).",category: "fun",react: "🎲",filename: __filename, },async(Void, citel, text , {cmdName}) => { return await citel.reply(await randomeFunfacts(cmdName)); });
 //--------------------------------------------------------------------------------
-smd({pattern: "joke",desc: "Sends Joke in chat.",category: "fun",filename: __filename, },async(Void, citel, text , {cmdName}) => { return await citel.reply(await randomeFunfacts(cmdName)); });
+smd({pattern: "joke",desc: "Sends Joke in chat.",category: "fun",react: "🎲",filename: __filename, },async(Void, citel, text , {cmdName}) => { return await citel.reply(await randomeFunfacts(cmdName)); });
 //---------------------------------------------------------------------------
-smd({pattern: "joke2",desc: "Sends Joke in chat.",category: "fun",filename: __filename, },async(Void, citel, text , {cmdName}) => { return await citel.reply(await randomeFunfacts(cmdName)); });
+smd({pattern: "joke2",desc: "Sends Joke in chat.",category: "fun",react: "🎲",filename: __filename, },async(Void, citel, text , {cmdName}) => { return await citel.reply(await randomeFunfacts(cmdName)); });
 //---------------------------------------------------------------------------
-smd({pattern: "fact",desc: "Sends fact in chat.",category: "fun",filename: __filename, },async(Void, citel, text , {cmdName}) => { return await citel.reply(await randomeFunfacts(cmdName)); });
+smd({pattern: "fact",desc: "Sends fact in chat.",category: "fun",react: "🎲",filename: __filename, },async(Void, citel, text , {cmdName}) => { return await citel.reply(await randomeFunfacts(cmdName)); });
 //---------------------------------------------------------------------------
-smd({pattern: "quotes",desc: "Sends quotes in chat.",category: "fun",filename: __filename, },async(Void, citel, text , {cmdName}) => { return await citel.reply(await randomeFunfacts(cmdName)); });
+smd({pattern: "quotes",desc: "Sends quotes in chat.",category: "fun",react: "🎲",filename: __filename, },async(Void, citel, text , {cmdName}) => { return await citel.reply(await randomeFunfacts(cmdName)); });
 //---------------------------------------------------------------------------
-smd({pattern: "define",desc: "urban dictionary.",category: "fun",filename: __filename,},async(Void, citel, text) =>{try{let { data } = await axios.get(`http://api.urbandictionary.com/v0/define?term=${text}`);var textt = `Word: ${text}\nDefinition: ${data.list[0].definition.replace(/\[/g, "").replace(/\]/g, "")}\nExample: ${data.list[0].example.replace(/\[/g, "").replace(/\]/g, "")}`;return citel.reply(textt);} catch {return citel.reply(`No result for ${text}`) }});
+smd({pattern: "define",desc: "urban dictionary.",category: "fun",react: "🎲",filename: __filename,},async(Void, citel, text) =>{try{let { data } = await axios.get(`http://api.urbandictionary.com/v0/define?term=${text}`);var textt = `Word: ${text}\nDefinition: ${data.list[0].definition.replace(/\[/g, "").replace(/\]/g, "")}\nExample: ${data.list[0].example.replace(/\[/g, "").replace(/\]/g, "")}`;return citel.reply(textt);} catch {return citel.reply(`No result for ${text}`) }});
