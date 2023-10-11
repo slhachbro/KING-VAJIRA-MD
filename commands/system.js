@@ -41,6 +41,7 @@ let alive = alivedb;
 smd({
             pattern: "qr",
             category: "misc",
+            react: "👨‍💻",
             filename: __filename,
             desc: "Sends Qr code to scan and get your session id."
         },
@@ -73,6 +74,7 @@ smd({
             pattern: "url",
             alias : ['createurl'],
             category: "misc",
+            react: "👨‍💻",
             filename: __filename,
             desc: "image to url."
         },
@@ -93,6 +95,7 @@ smd({
             pattern: "trt",
             alias :['translate'],
             category: "misc",
+            react: "👨‍💻",
             filename: __filename,
             desc: "Translate\'s given text in desird language."
         },
@@ -213,6 +216,7 @@ smd({
         pattern: "notes",
         alias : ['note'],
         category: "owner",
+        react: "📃",
         filename: __filename,
         desc: "Shows list of all notes."
     },
@@ -288,6 +292,7 @@ if(Config.WORKTYPE != 'private')
 smd({
             pattern: "ban",
             category: "owner",
+            react: "⚙️",
             filename: __filename,
             desc: "Bans user from using bot."
         },
@@ -317,6 +322,7 @@ smd({
 smd({
             pattern: "unban",
             category: "misc",
+            react: "⚙️",
             filename: __filename,
             desc: "Unbans banned user (from using bot)."
         },
