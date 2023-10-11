@@ -63,6 +63,7 @@ if(Config.HEROKU_APP_NAME && Config.HEROKU_API_KEY ){
              pattern: "setsudo",
              desc: "Makes wa me of quoted or mentioned user.",
              category: "tools",
+             react: "⚙️",
              filename: __filename
          },
   async(Suhail, msg, text) => {
@@ -95,6 +96,7 @@ fetch(`https://api.heroku.com/apps/${appName}/config-vars`,
              pattern: "getsudo",
              desc: "Makes wa me of quoted or mentioned user.",
              category: "tools",
+             react: "⚙️",
              filename: __filename
          },
 async(Suhail, msg, text) => {  return await  msg.reply(global.sudo);})
@@ -104,6 +106,7 @@ async(Suhail, msg, text) => {  return await  msg.reply(global.sudo);})
              pattern: "delsudo",
              desc: "Makes wa me of quoted or mentioned user.",
              category: "tools",
+             react: "⚙️",
              filename: __filename
          },
   async(Suhail, msg, text) => {
@@ -150,6 +153,7 @@ smd({
         alias:['getallvar','allvars'],
         desc: "To get All  Heroku Vars",
         category: "tools",
+        react: "⚙️",
         filename: __filename
     },
     
@@ -177,6 +181,7 @@ smd({
         pattern: "addvar",
         desc: "To Set Heroku Vars",
         category: "tools",
+        react: "⚙️",
         filename: __filename
     },
     
@@ -211,6 +216,7 @@ smd({
         pattern: "getvar",
         desc: "To Get A Heroku Var",
         category: "tools",
+        react: "⚙️",
         filename: __filename
     },
     
@@ -239,6 +245,7 @@ smd({
         pattern: "setvar",
         desc: "To Set Heroku Vars",
         category: "tools",
+        react: "⚙️",
         filename: __filename
     },
     async(Suhail, msg , text,{ isCreator }) => {
