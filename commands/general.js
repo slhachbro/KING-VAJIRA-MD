@@ -40,19 +40,19 @@ function _0x2a0d(_0xb8a708,_0x40022f){const _0x29539c=_0x2953();return _0x2a0d=f
 //---------------------------------------------------------------------------
 //                  AI  CHAT  COMMAND
 //---------------------------------------------------------------------------
-smd({ pattern: "chat",desc: "chat with an AI",category: "ai",use: '<Hii, Vajira Tech Info>', filename: __filename,},async(Aviator, msg,text) => { return msg.reply(await aiResponce(msg, "chat", text)); }
+smd({ pattern: "chat",desc: "chat with an AI",category: "ai",react: "👨‍💻",use: '<Hii, Vajira Tech Info>', filename: __filename,},async(Aviator, msg,text) => { return msg.reply(await aiResponce(msg, "chat", text)); }
 )
 
 
 //---------------------------------------------------------------------------
-smd({pattern: "gpt",desc: "chat with an AI",category: "ai",use: '<Hii,Vajira Tech Info>',filename: __filename,},
+smd({pattern: "gpt",desc: "chat with an AI",category: "ai",react: "👨‍💻",use: '<Hii,Vajira Tech Info>',filename: __filename,},
     async(Aviator, msg,text) =>{
   if ( Config.OPENAI_API_KEY=='' ||  !Config.OPENAI_API_KEY.startsWith('sk') ) return msg.reply('```You Dont Have OPENAI API KEY \nPlease Create OPEN API KEY from Given Link \nhttps://platform.openai.com/account/api-keys\nAnd Set Key in Heroku OPENAI_API_KEY Var```')
   if (!text) return msg.reply(`Hey there! ${msg.pushName}. How are you doing these days?`); 
       return msg.send(await aiResponce(msg, "gpt",  text));
     });
 //---------------------------------------------------------------------------
-smd({pattern: "dalle",alias : ['dall','dall-e'],desc: "chat with an AI",category: "ai", use: '<Hii, Vajira Tech Info>',filename: __filename,},
+smd({pattern: "dalle",alias : ['dall','dall-e'],desc: "chat with an AI",category: "ai",react: "👨‍💻", use: '<Hii, Vajira Tech Info>',filename: __filename,},
     async(Aviator, msg,text) =>{
   if ( Config.OPENAI_API_KEY=='' ||  !Config.OPENAI_API_KEY.startsWith('sk') ) return msg.reply('```You Dont Have OPENAI API KEY \nPlease Create OPEN API KEY from Given Link \nhttps://platform.openai.com/account/api-keys\nAnd Set Key in Heroku OPENAI_API_KEY Var```')
  if (!text) return msg.reply(`*Give Me A Query To Get Dall-E Reponce ?*`); 
@@ -62,7 +62,7 @@ smd({pattern: "dalle",alias : ['dall','dall-e'],desc: "chat with an AI",category
 
 
 //---------------------------------------------------------------------------
-smd({pattern: "rmbg",alias : ['removebg'],category: "ai",filename: __filename,desc: "Remove image Background." },
+smd({pattern: "rmbg",alias : ['removebg'],category: "ai",react: "👨‍💻",filename: __filename,desc: "Remove image Background." },
 async(Aviator, msg, text) => {
 
     if (!Config.REMOVE_BG_KEY ) return msg.reply('```You Dont Have REMOVE_BG_KEY \nPlease Create RemoveBG KEY from Given Link \nhttps://www.remove.bg/\nAnd Set Key in REMOVE_BG_KEY Var```')
@@ -95,7 +95,7 @@ async(Aviator, msg, text) => {
         return { date, time };
       }
 ///=============================================
-smd({pattern: "uptime",alias: ["runtime"],desc: "Tells runtime/uptime of bot.",category: "misc", filename: __filename},async(Suhail, msg, text) => {const upt = runtime(process.uptime());msg.reply(`*_Uptime of ${Config.botname}: ${upt}_*`);})
+smd({pattern: "uptime",alias: ["runtime"],desc: "Tells runtime/uptime of bot.",category: "misc",react: "👨‍💻", filename: __filename},async(Suhail, msg, text) => {const upt = runtime(process.uptime());msg.reply(`*_Uptime of ${Config.botname}: ${upt}_*`);})
 //---------------------------------------------------------------------------
 //                  RREPOSITORY  COMMAND
 //---------------------------------------------------------------------------
@@ -104,6 +104,7 @@ smd({
         alias: ["git", "sc", "script"],
         desc: "Sends info about repo",
         category: "general",
+	react: "👨‍💻",
         filename: __filename,
     },
     async(Suhail, citel) => {
@@ -132,6 +133,7 @@ smd({
         alias: ["about" , "info"],
         desc: "To check bot status",
         category: "general",
+	react: "👨‍💻",
         filename: __filename,
     },
     async(Suhail, citel) => {
@@ -159,6 +161,7 @@ smd({
   pattern: "cpu",
   desc: "To check bot status",
   category: "general",
+  react: "👨‍💻",
   filename: __filename,
 },
 async(Suhail, msg) => {
