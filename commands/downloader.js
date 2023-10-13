@@ -390,7 +390,6 @@ smd({pattern: "video", desc: "Downloads video from yt.", category: "downloader",
 async(Suhail, citel, text) => {
   text = text ? text : citel.quoted && citel.quoted.text ? citel.quoted.text : ""
   
-  if (!text) return citel.reply(`Example : ${prefix}video Back in black`);
   let vid = ytIdRegex.exec(text) || [], urlYt = vid[0] || false;
   if (!urlYt) { let yts = require("secktor-pack"),search = await yts(text),anu = search.videos[0];urlYt = anu.url;  }
   vid = ytIdRegex.exec(urlYt);
