@@ -311,7 +311,7 @@ smd({
         }
     }
 
-for (let url of urlsArray) { Suhail.bot.sendMessage(citel.chat , {image : {url : url} } )  }
+for (let url of urlsArray) { Suhail.bot.sendMessage(citel.chat , {image : {url : url} } ), caption: `📥 𝙶𝙴𝙽𝙴𝚁𝙰𝚃𝙴𝙳 𝙱𝚈 𝚅𝙰𝙹𝙸𝚁𝙰 𝙼𝙳 ²⁰²³`  }
 } 
  catch (error) {   return citel.reply("*Google Images Not Working, Try it Later*"); }
 
