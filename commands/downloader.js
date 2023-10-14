@@ -391,10 +391,10 @@ async(Suhail, citel, text) => {
   text = text ? text : citel.quoted && citel.quoted.text ? citel.quoted.text : ""
   
   if (!text) return citel.reply(`Example : ${prefix}video Back in black`);
+  await citel.send(`_🎶ඔබේ ගීතය භාගත වෙමින් පවතී📥 ${info.title}?_`);
   let yts = require("secktor-pack")
   let search = await yts(text);
   let i = search.all[1] ;
-  await citel.send(`_🎶ඔබේ ගීතය භාගත වෙමින් පවතී📥 ${info.title}?_`);
   Suhail.bot.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
   let vid = ytIdRegex.exec(text) || [], urlYt = vid[0] || false;
   if (!urlYt) { let yts = require("secktor-pack"),search = await yts(text),anu = search.videos[0];urlYt = anu.url;  }
