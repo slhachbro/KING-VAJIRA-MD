@@ -446,7 +446,6 @@ async(Suhail, citel, text) => {
     let file = await yt.download(vid[1],{type : "audio",quality:"best"})	  
     console.log("file:",file)
     file ? await Suhail.bot.sendMessage(citel.chat, {audio: {url : file } ,mimetype: 'audio/mpeg', }) :  await citel.send("Video not Found");
-    await Suhail.bot.sendMessage(citel.chat, buttonMessage, { quoted: citel })
     try{fs.unlinkSync(file)}catch{}
   }catch (e) { console.log(" Play error, "  , e); return citel.error(`${e} \n\ncmdName : play`) }
 })
