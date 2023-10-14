@@ -418,7 +418,7 @@ async(Suhail, citel, text) => {
       let meta = { type:"video", quality: info.pref_Quality,}
       let file = await yt.download(vid[1] , meta )
       let thumb = await botpic();
-      file ? await Suhail.bot.sendMessage(citel.chat, { video: {url : file },caption: "  *✅ඔබ ඉල්ලූ ගීතය✅*\n\n📌Title : " + i.title + "\n\n🗺️Description : " + i.timestamp +"\n\n👥Views : "+i.views +"\n\n📥Uploaded : " +i.ago +"\n\n👤Author : "+i.author.name+"\n\n🔰Url : " + i.url +"\n" + Config.caption ,mimetype: 'video/mp4',jpegThumbnail: log0,height: 496, width: 640 }) :  await citel.send("Video not Found"); 
+      file ? await Suhail.bot.sendMessage(citel.chat, { video: {url : file },caption: "  *✅ඔබ ඉල්ලූ ගීතය✅*\n\n📌Title : " + i.title + "\n\n🗺️Description : " + i.timestamp +"\n\n👥Views : "+i.views +"\n\n📥Uploaded : " +i.ago +"\n\n👤Author : "+i.author.name+"\n\n🔰Url : "+i.url +"\n" + Config.caption ,mimetype: 'video/mp4',jpegThumbnail: log0,height: 496, width: 640 }) :  await citel.send("Video not Found"); 
       try{fs.unlinkSync(`${file}`)}catch{}
     }catch(err) {console.log("ytdl Download video error:", e); console.log("Youtubei Video Download Error :" , err);return await citel.error(`${err} \n\ncmdName : video` )   }
   
