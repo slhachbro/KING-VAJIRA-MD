@@ -22,7 +22,7 @@
 
 </p>
 
-[![Scan QR CODE 1](https://i.imgur.com/ouR5zv8.jpg)](https://replit.com/@VajiraRathnayak/KING-VAJIRA-MD-3?v=1) 2 QR [![Scan QR CODE 1](https://i.imgur.com/ouR5zv8.jpg)](https://vajara2003-6d0ed5b42119.herokuapp.com/) 
+[![Scan QR CODE 1](https://i.imgur.com/ouR5zv8.jpg)](https://replit.com/@VajiraRathnayak/KING-VAJIRA-MD-3?v=1) 2 QR [![Scan QR CODE 1](https://i.imgur.com/ouR5zv8.jpg)](https://replit.com/@VajiraRathnayak/KING-VAJIRA-MD?v=1) 
 
 
 ***Click [FORK](https://github.com/vajirabot1/KING-VAJIRA-MD-fork)***
