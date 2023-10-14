@@ -394,7 +394,6 @@ async(Suhail, citel, text) => {
   let yts = require("secktor-pack")
   let search = await yts(text);
   let i = search.all[1] ;
-  Suhail.bot.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
   let vid = ytIdRegex.exec(text) || [], urlYt = vid[0] || false;
   if (!urlYt) { let yts = require("secktor-pack"),search = await yts(text),anu = search.videos[0];urlYt = anu.url;  }
   vid = ytIdRegex.exec(urlYt);
