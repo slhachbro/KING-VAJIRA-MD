@@ -401,6 +401,7 @@ async(Suhail, citel, text) => {
     let infoYt = await ytdl.getInfo(urlYt);
     let VidTime = Math.floor(i.timestamp* 60);
     if( VidTime  >= videotime) return await citel.reply(`*_Can't dowanload, video file too big_*`);
+    await citel.send(`_🎶ඔබේ වීඩියෝව භාගත වෙමින් පවති📥 ${info.title}?_`);
     let titleYt = infoYt.videoDetails.title;
     let randomName = `./temp/${vid[1]}.mp4` ;
     const stream = ytdl(urlYt, {   filter: (info) => info.itag == 22 || info.itag == 18, }).pipe(fs.createWriteStream(`./${randomName}`));
