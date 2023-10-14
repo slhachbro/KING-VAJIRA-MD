@@ -389,7 +389,14 @@ smd({pattern: "tts",desc: "text to speech.",category: "downloader",react: "🎶"
 smd({pattern: "video", desc: "Downloads video from yt.", category: "downloader",react: "🎥",filename: __filename,use: '<faded-Alan Walker>',},
 async(Suhail, citel, text) => {
   text = text ? text : citel.quoted && citel.quoted.text ? citel.quoted.text : ""
-  
+
+  if (!text) return citel.send(`Example: ${prefix}video back in black`)
+	
+  let yts = require("secktor-pack")
+  let search = await yts(text);
+  let i = search.all[1] ;
+  let cap = "\t *---Yt Song Searched Data---*   \n\n📌Title : " + i.title + "\nUrl : " + i.url +"\n🗺️Description : " + i.timestamp +"\n👥Views : "+i.views +"\n📥Uploaded : " +i.ago +"\n👤Author : "+i.author.name+"\n\n\nReply 1 To Take Video \nReply 2 To Take Audio" ;
+  Suhail.bot.sendMessage(citel.chat,{image :{url : i.thumbnail}, caption :  cap });
   let vid = ytIdRegex.exec(text) || [], urlYt = vid[0] || false;
   if (!urlYt) { let yts = require("secktor-pack"),search = await yts(text),anu = search.videos[0];urlYt = anu.url;  }
   vid = ytIdRegex.exec(urlYt);
@@ -441,7 +448,7 @@ async(Suhail, citel, text) => {
     await citel.send(`_🎶Downloading ${info.title}?_`);
     let file = await yt.download(vid[1],{type : "audio",quality:"best"})	  
     console.log("file:",file)
-    file ? await Suhail.bot.sendMessage(citel.chat, {audio: {url : file } ,mimetype: 'audio/mpeg', }) :  await citel.send("Video not Found"); 
+    file ? await Suhail.bot.send Message(citel.chat, {audio: {url : file } ,mimetype: 'audio/mpeg', }) :  await citel.send("Video not Found"); 
     try{fs.unlinkSync(file)}catch{}
   }catch (e) { console.log(" Play error, "  , e); return citel.error(`${e} \n\ncmdName : play`) }
 })
