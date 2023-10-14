@@ -568,7 +568,7 @@ async(Suhail, citel, text) => {
   try{
   let yts = require("secktor-pack");
   text = text ? text : citel.quoted && citel.quoted.text ? citel.quoted.text : ""
-  if (!text) return citel.reply(`Example : ${prefix}yts WhatsApp Bot by Suhail Tech`);
+  if (!text) return citel.reply(`Example : ${prefix}yts WhatsApp Bot by Vajira Tech`);
   let search = await yts(text);
   let textt = "*YouTube Search*\n Result From " + text + "\n   ─────────────────── \n";
   for (let i of search.all) {
