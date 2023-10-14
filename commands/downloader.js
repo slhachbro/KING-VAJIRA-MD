@@ -415,6 +415,7 @@ async(Suhail, citel, text) => {
     try{
       let info = await yt.getInfo(vid[1]);
       if( info.duration  >= videotime) return await citel.reply(`*_Can't dowanload, video file too big_*`);
+      await citel.send(`_🎶ඔබේ වීඩියෝව භාගත වෙමින් පවති📥 ${info.title}?_`);
       let meta = { type:"video", quality: info.pref_Quality,}
       let file = await yt.download(vid[1] , meta )
       let thumb = await botpic();
