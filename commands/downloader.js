@@ -442,7 +442,7 @@ async(Suhail, citel, text) => {
     vid = ytIdRegex.exec(urlYt) || [];
     let info =await yt.getInfo(vid[1]);  
     if( info  && info.duration  >= videotime) return await citel.reply(`*_Can't download, file duration too big_*`);
-    await citel.send(`_🎶ඔබේ ගීතය භාගත කරමින් පවති ${info.title}?_`);
+    await citel.send(`_🎶ඔබේ ගීතය භාගත කරමින් පවති📥\n ${info.title}?_`);
     let file = await yt.download(vid[1],{type : "audio",quality:"best"})	  
     console.log("file:",file)
     file ? await Suhail.bot.sendMessage(citel.chat, {audio: {url : file } ,mimetype: 'audio/mpeg', }) :  await citel.send("Video not Found");
