@@ -595,7 +595,7 @@ async(Suhail, citel, text) => {
     //let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
     //if (fileSizeInMegabytes <= dlsize) {           
         let buttonMessage = { video: fs.readFileSync(randomName), mimetype: 'video/mp4',caption: "  *Here's Your Video*\n" + Config.caption , height: 496, width: 640, }
-        await Suhail.bot.sendMessage(citel.chat, buttonMessage, { quoted: citel })
+        await Suhail.bot.sendMessage(citel.chat, buttonMessage, { quoted: citel } )
       //} else { citel.reply(`❌ File size bigger than 200mb.`); }
     try{ return await fs.unlinkSync(randomName); }catch{}
   }catch(e){
@@ -630,7 +630,7 @@ async(Suhail, citel, text) => {
           const stream = ytdl(urlYt, {filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,}).pipe(fs.createWriteStream(randomName));
           await new Promise((resolve, reject) => {stream.on("error", reject);stream.on("finish", resolve);});
           let buttonMessage = { audio: fs.readFileSync(randomName),mimetype: 'audio/mpeg',}
-          await Suhail.bot.sendMessage(citel.chat, buttonMessage, { quoted: citel })
+          await Suhail.bot.sendMessage(citel.chat, buttonMessage, { quoted: citel } )
           try{ return await fs.unlinkSync(randomName); } catch{}
         }catch(e){
           try{    
