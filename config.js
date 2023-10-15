@@ -26,6 +26,7 @@ module.exports = {
   botbgm: process.env.BOT_BGM || 'false',
   ownername:  process.env.OWNER_NAME || `It'x vajira`,
   author:  process.env.PACK_AUTHER || '',
+  autovoice: process.env.AUTO_VOICE || 'true',
   errorChat : process.env.ERROR_CHAT|| '', // put 'chat' here to send error in chat ,where it accures
   read_status : process.env.AUTO_READ_STATUS || 'false',
   save_status : process.env.AUTO_SAVE_STATUS || 'false',
