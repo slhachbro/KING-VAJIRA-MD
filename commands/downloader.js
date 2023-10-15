@@ -498,13 +498,13 @@ smd({pattern: "mediafire",alias :['mf','mfire'],desc: "Downloads media from Medi
 	const apkSize = parseInt(baby1[0].size);
 	if(apkSize > 100) return citel.reply(`❌ File size bigger than 150mb.`);
 	
-let result4 = ` *Mᴇᴅɪᴀғɪʀᴇ Dᴏᴡɴʟᴏᴀᴅᴇʀ*\n*Nᴀᴍᴇ* : ${baby1[0].nama}\n*Sɪᴢᴇ* :${baby1[0].size}\n*Mɪᴍᴇ* : ${baby1[0].mime}\n\n${Config.caption}`;
+let result4 = ` *📥Mᴇᴅɪᴀғɪʀᴇ Dᴏᴡɴʟᴏᴀᴅᴇʀ📥*\n*🔰Nᴀᴍᴇ* : ${baby1[0].nama}\n*⭕Sɪᴢᴇ* :${baby1[0].size}\n*📌Mɪᴍᴇ* : ${baby1[0].mime}\n\n${Config.caption}`;
 	
             //citel.reply(`${result4}`);
             
             let buttonMessaged = {document: { url: baby1[0].link, }, caption: result4,fileName: baby1[0].nama,mimetype: baby1[0].mime, }; 
                 
- return await Suhail.bot.sendMessage(citel.chat, buttonMessaged)
+ return await Suhail.bot.sendMessage(citel.chat, buttonMessaged, { quoted: citel } )
                 //.catch((err) => citel.reply(`could not found anything`));
 
         }
