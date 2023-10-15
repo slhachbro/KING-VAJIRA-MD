@@ -79,7 +79,11 @@
   },
   "MONGODB_URI": {
     "description": "ඔබේම Mongodb යතුර දමන්න. එය Mongodb සම්බන්ධතාවය සඳහා රහස් තන්තුවකි.(Required)",
-    "value": "mongodb+srv://vajira:vajira@cluster0.hzwqrqq.mongodb.net/?retryWrites=true&w=majority"	  
+    "value": "mongodb+srv://vajira:vajira@cluster0.hzwqrqq.mongodb.net/?retryWrites=true&w=majority"	
+  }, 
+     "LANG": { 
+     "description": "Put the Language you want to use. Available Languages are SI,EN and many more..", 
+      "value": "PUT SI OR EN HERE/මෙතන්ට SI හරි EN හරි අනිවාරෙන්ම දාන්න"
   },
   "MODE": {
     "description": "ඔබේ බොට් එකේ වැඩ වර්ගය. Public හෝ Privert භාවිතා කරන්න, එය Privert නම්, එය භාවිතා කළ හැක්කේ බොට් අංකයට පමණි. Public නම්, සෑම කෙනෙකුටම එය භාවිතා කළ හැකිය.",
