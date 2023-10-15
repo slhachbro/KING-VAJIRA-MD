@@ -5,7 +5,7 @@ const {
 	// genButtonMessage
 } = require('../lib')
 
-bot(
+smd(
 	{
 		pattern: 'antispam ?(.*)',
 		fromMe: true,
