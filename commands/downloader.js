@@ -504,7 +504,7 @@ let result4 = ` *Mᴇᴅɪᴀғɪʀᴇ Dᴏᴡɴʟᴏᴀᴅᴇʀ*\n*Nᴀᴍᴇ* 
             
             let buttonMessaged = {document: { url: baby1[0].link, }, caption: result4,fileName: baby1[0].nama,mimetype: baby1[0].mime, }; 
                 
-            return Suhail.bot.sendMessage(citel.chat, buttonMessage, {  quoted: citel })
+            return await Suhail.bot.sendMessage(citel.chat, buttonMessage)
                 //.catch((err) => citel.reply(`could not found anything`));
 
         }
