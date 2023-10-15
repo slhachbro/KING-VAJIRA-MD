@@ -56,7 +56,7 @@
 
  3)     mongodb+srv://Suhail_Md:Suhail_Md@cluster1.0tlyzhm.mongodb.net/?retryWrites=true&w=majority
 
-[![USHANI](https://github.com/dgxeon.png?size=80)](https://github.com/dgxeon) | [![SAVIYA](https://telegra.ph/file/5128ab8d09a35d78afbca.jpg?size=100)](https://github.com/fantox001) | [![CYBER YAKUZA](https://github.com/sampandey001.png?size=109)](https://github.com/sampandey001) | [![DILSHAN](https://telegra.ph/file/ebc230bb6dea106bdcfda.jpg?size=80)](https://github.com/issa2001) | [![SUHAIL](https://github.com/Prince-Mendiratta.png?size=80)](https://github.com/Prince-Mendiratta)
+[![USHANI](https://telegra.ph/file/2db7a32c8c1b8f92b187e.jpg?size=80)](https://github.com/dgxeon) | [![SAVIYA](https://telegra.ph/file/9d7e613e95b92c8caeae1.jpg?size=100)](https://github.com/fantox001) | [![CYBER YAKUZA](https://github.com/sampandey001.png?size=109)](https://github.com/sampandey001) | [![DILSHAN](https://telegra.ph/file/2d9c12cd85128f85e1085.jpg?size=80)](https://github.com/issa2001) | [![SUHAIL](https://telegra.ph/file/215e40183fa575c15d16c.jpg?size=80)](https://github.com/Prince-Mendiratta)
 ----|----|----|----|----
 [USHANI](https://wa.me/94767898887) | [SAVIYA](https://wa.me/+94757309293) | [CYBER YAKUZA](https://wa.me/+94715264791) | [DILSHAN](https://wa.me/94773277849) | [SUHAIL](https://wa.me/919971606684)
 Voice helper  | Developer, Bug Fixes, Modules |Developer,Bug Fixes,Base, Modules, | Modules, Idea | Modules
