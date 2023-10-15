@@ -101,7 +101,7 @@ smd({
           try{
                let res = await updateHerokuApp('no');
           }catch(e){return await msg.error(e)}
-          await msg.reply(`*සාර්ථකව යාවත්කාලීන කරන ලදී. දැන් ඔබ නවතම අනුවාදය ස්ථාපනය කර ඇත!*`);
+          await msg.reply(`*📥 සාර්ථකව යාවත්කාලීන කරන ලදී. දැන් ඔබ නවතම අනුවාදය ස්ථාපනය කර ඇත!*`);
                 process.exit(0);
        })
 smd({   pattern: "restart", desc: "To restart bot",category: "tools",react: "✅", filename: __filename }, async(Suhail, msg,text,{ isCreator }) => {  if (!isCreator) return msg.reply(tlang().owner);  const { exec } = require("child_process"); msg.reply('Restarting'); exec('pm2 restart all'); });
