@@ -227,8 +227,10 @@ let txt = `╭───── *『 MONGODB NOTES 』* ───◆
 ┃ Here You Can Store Notes For Later Use
 ┃ *------------------------------------------*
 ┃  ┌┤  *✯---- ADD NEW NOTE ----⦿*
-┃  │✭ *Cmd :* ${prefix}notes add 'Your Text'
-┃  │✭ *Usage :* Save Text in MongoDb Server
+┃  │✭ *Cmd :* ${date}
+┃  │✭ *Cmd :* ${time}
+┃  │✭ *Cmd :* ${forks}
+┃  │✭ *Cmd :* ${stars}
 ┃  ╰───────────────────◆
 ┃
 ┃  ┌┤  *✯---- GET ALL NOTES ----⦿*
