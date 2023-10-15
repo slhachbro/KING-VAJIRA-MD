@@ -287,6 +287,7 @@ smd({
         hl: "en",
         gl: "in",
         ijn: "0", 
+        _Powered by ${Config.ownername}_
     };
     const headers = {
       "User-Agent":
