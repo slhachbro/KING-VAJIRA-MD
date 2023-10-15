@@ -300,7 +300,7 @@ smd({
     body = body.slice(body.indexOf("["));
     body = body.slice(0, body.indexOf("</script>")-1);
     body = body.slice(0, body.lastIndexOf(","));
-   _Powered by ${Config.ownername}_
+  
     
     const img = JSON.parse(body);
 
