@@ -308,16 +308,10 @@ smd({
         if (imgObjects[i] && imgObjects[i][0][0]["444383007"][1]) {
             let url = imgObjects[i][0][0]["444383007"][1][3][0]; // the url
             urlsArray.push(url);         
-        }
-    }
-
 for (let url of urlsArray) { Suhail.bot.sendMessage(citel.chat , {image : {url : url} } )  }
 } 
  catch (error) {   return citel.reply("*Google Images Not Working, Try it Later*"); }
- 
- 
- 
- 
+  
 let isImages = false;
             let num = text.split("|")[1];
  gis(name1, async(error, result) => { 
