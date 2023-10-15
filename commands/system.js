@@ -213,7 +213,7 @@ smd({
 
 if(isMongodb){
 smd({
-        pattern: "notes",
+        pattern: "script",
         alias : ['note'],
         category: "owner",
         react: "📃",
