@@ -498,7 +498,7 @@ smd({pattern: "mediafire",alias :['mf','mfire'],desc: "Downloads media from Medi
 	const apkSize = parseInt(baby1[0].size);
 	if(apkSize > 100) return citel.reply(`❌ File size bigger than 150mb.`);
 	
-let result4 = ` *📥Mᴇᴅɪᴀғɪʀᴇ Dᴏᴡɴʟᴏᴀᴅᴇʀ📥*\n*🔰Nᴀᴍᴇ* : ${baby1[0].nama}\n*⭕Sɪᴢᴇ* :${baby1[0].size}\n*📌Mɪᴍᴇ* : ${baby1[0].mime}\n\n${Config.caption}`;
+let result4 = ` *📥Mᴇᴅɪᴀғɪʀᴇ Dᴏᴡɴʟᴏᴀᴅᴇʀ📥*\n\n*🔰Nᴀᴍᴇ* : ${baby1[0].nama}\n\n*⭕Sɪᴢᴇ* :${baby1[0].size}\n\n*📌Mɪᴍᴇ* : ${baby1[0].mime}\n\n${Config.caption}`;
 	
             //citel.reply(`${result4}`);
             
