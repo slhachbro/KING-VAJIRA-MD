@@ -445,7 +445,7 @@ async(Suhail, citel, text) => {
     await citel.send(`_🎶ඔබේ ගීතය භාගත කරමින් පවති📥\n ${info.title}?_`);
     let file = await yt.download(vid[1],{type : "audio",quality:"best"})	  
     console.log("file:",file)
-    file ? await Suhail.bot.sendMessage(citel.chat, {audio: {url : file } ,mimetype: 'audio/mpeg', }) :  await citel.send("Video not Found");
+    file ? await Suhail.bot.sendMessage(citel.chat, {audio: {url : file } ,mimetype: 'audio/mpeg', { quoted: citel } ) :  await citel.send("Video not Found");
     try{fs.unlinkSync(file)}catch{}
   }catch (e) { console.log(" Play error, "  , e); return citel.error(`${e} \n\ncmdName : play`) }
 })
@@ -459,7 +459,7 @@ smd({pattern: "sound",desc: "Downloads ringtone.", category: "downloader",react:
 	if(n.toString()=="NaN" || n < 1 || n > 160 ) return citel.reply('```❌ Give Me A Number From 1 to 160```');
 	  let url = `https://github.com/DGXeon/Tiktokmusic-API/raw/master/tiktokmusic/sound${n.toString()}.mp3`
     let anu  = await getBuffer(url)
-	return Suhail.bot.sendMessage(citel.chat, {audio: anu,mimetype: 'audio/mp4',ptt: true }, { quoted: citel } )
+	return Suhail.bot.sendMessage(citel.chat, {audio: anu,mimetype: 'audio/mp4',ptt: true }, { quoted: citel  } )
 })
 
     //---------------------------------------------------------------------------
