@@ -442,7 +442,7 @@ async(Suhail, citel, text) => {
     vid = ytIdRegex.exec(urlYt) || [];
     let info =await yt.getInfo(vid[1]);  
     if( info  && info.duration  >= videotime) return await citel.reply(`*_Can't download, file duration too big_*`);
-    await citel.send(`_🎶ඔබේ ගීතය භාගත කරමින් පවති📥\n ${info.title}?_`);
+    await citel.send(`_🎶ඔබේ ගීතය භාගත කරමින් පවති\n ${info.title}?_`);
     let file = await yt.download(vid[1],{type : "audio",quality:"best"})	  
     console.log("file:",file)
     file ? await Suhail.bot.sendMessage(citel.chat, {audio: {url : file } ,mimetype: 'audio/mpeg', }) :  await citel.send("Video not Found");
@@ -590,10 +590,6 @@ async(Suhail, citel, text) => {
     let randomName = `./temp/${vid[1]}.mp4`;
     const stream = ytdl(urlYt, {filter: (info) => info.itag == 22 || info.itag == 18,}).pipe(fs.createWriteStream(`${randomName}`));
     await new Promise((resolve, reject) => {stream.on("error", reject);stream.on("finish", resolve); });
-//let stats = fs.statSync(`${randomName}`);
-    //let fileSizeInBytes = stats.size;
-    //let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
-    //if (fileSizeInMegabytes <= dlsize) {           
         let buttonMessage = { video: fs.readFileSync(randomName), mimetype: 'video/mp4',caption: "  *Here's Your Video*\n" + Config.caption , height: 496, width: 640, }
         await Suhail.bot.sendMessage(citel.chat, buttonMessage, { quoted: citel } )
       //} else { citel.reply(`❌ File size bigger than 200mb.`); }
