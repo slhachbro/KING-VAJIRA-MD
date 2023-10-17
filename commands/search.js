@@ -106,15 +106,11 @@ const fetch = require('node-fetch')
 
 const buttonMessage = {
     image: {url: hirunews.image },
-    caption: `*${hirunews.title}*\n\n${hirunews.description}\n\n📅 ᴅᴀᴛᴇ ᴀɴᴅ ᴛɪᴍᴇ : *${hirunews.date_time}*\n*⚠️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴠᴀᴊɪʀᴀ-ᴍᴅ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ..ᴄᴏᴅᴇ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ᴋɪɴᴅ ᴀʟᴘʜᴀ ᴀɴᴅ ᴠᴀᴊɪʀᴀ*` ,
-    headerType: 4
-}
-     
-     await Suhail.bot.sendMessage(citel.chat, buttonMessage, {quoted:citel} )
-         }
-    )
+    caption: `*${hirunews.title}*\n\n${hirunews.description}\n\n📅 ᴅᴀᴛᴇ ᴀɴᴅ ᴛɪᴍᴇ : *${hirunews.date_time}*\n*⚠️
+  
     //------------------------------------------------------------------------------------
-smd({
+
+    smd({
             pattern: 'ss',
             alias :['webss' , 'fullss'],
             category: "search",
