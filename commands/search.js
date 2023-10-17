@@ -72,7 +72,7 @@ const fetch = require('node-fetch')
 //   *Album :* _${data.album}_    
 //   *Release :* _${data.release_date}
 
-
+  
    let buttonMessaged = {
                    image: { url: anu.thumbnail, },
                    caption: h,
@@ -92,6 +92,8 @@ const fetch = require('node-fetch')
                await Suhail.bot.sendMessage(citel.chat, buttonMessaged, { quoted: citel, });
        }
     )
+
+   //---------------------------------------------------------------------------
     smd({
         pattern: 'news',
         category: "search",
@@ -108,7 +110,7 @@ const buttonMessage = {
     headerType: 4
 }
      
-     await Suhail.bot.sendMessage(citel.chat, buttonMessage, {quoted:citel})
+     await Suhail.bot.sendMessage(citel.chat, buttonMessage,
          }
     )
     //------------------------------------------------------------------------------------
