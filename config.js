@@ -34,7 +34,7 @@ module.exports = {
   autoreaction: process.env.AUTO_REACTION || 'false',  //  | 'cmd' | 'true' | 'all' |
   antibadword : process.env.ANTI_BAD_WORD || 'nobadwordokeyuntillYouPutAnWordHere',
   alwaysonline: process.env.WAPRESENCE || '', // 'unavailable' | 'available' | 'composing' | 'recording' | 'paused'
-  antifake : 'null', // process.env.FAKE_COUNTRY_CODE ||'212',
+  antifake : 'null', // process.env.FAKE_COUNTRY_CODE ||'94',
   readmessage: process.env.READ_MESSAGE || 'false',   //  | 'false' | 'true' | 
   readcmds : process.env.READ_COMMANDS || 'false',    //  | 'false' | 'true' | 
   HANDLERS: process.env.PREFIX || ',',
