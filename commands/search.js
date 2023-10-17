@@ -110,7 +110,7 @@ const buttonMessage = {
     headerType: 4
 }
      
-     await Suhail.bot.sendMessage(citel.chat, buttonMessage,
+     await Suhail.bot.sendMessage(citel.chat, buttonMessage, {quoted:citel} )
          }
     )
     //------------------------------------------------------------------------------------
