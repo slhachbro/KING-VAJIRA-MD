@@ -11,3 +11,4 @@ smd({
 const buttonMessage = {
     image: {url: hirunews.image },
     caption: `*${hirunews.title}*\n\n${hirunews.description}\n\n📅 ᴅᴀᴛᴇ ᴀɴᴅ ᴛɪᴍᴇ : *${hirunews.date_time}*\n*⚠️
+}
