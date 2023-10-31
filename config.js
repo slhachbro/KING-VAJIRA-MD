@@ -21,8 +21,8 @@ global.scan  = process.env.QR_URL || 'https://replit.com/@VajiraRathnayak/KING-V
 global.website = 'https://github.com/vajirabot1/KING-VAJIRA-MD' ; //wa.me/+923000000000
 global.THUMB_IMAGE = process.env.THUMB_IMAGE || 'https://telegra.ph/file/fb7993e24f7ecdaecbed5.jpg' ;
 module.exports = {
-  sessionName: process.env.SESSION_ID || "VAJIRA;;;TrophyPried
-",      //Put Your Session Id Here
+  sessionName: process.env.SESSION_ID || "VAJIRA;;;PopularGasket
+"//Put Your Session Id Here
   botname: process.env.BOT_NAME || 'SL HACK',
   botbgm: process.env.BOT_BGM || 'true',
   ownername:  process.env.OWNER_NAME || `sl ip bro`,
